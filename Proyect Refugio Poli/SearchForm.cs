@@ -20,7 +20,7 @@ namespace Proyect_Refugio_Poli
 
         public int getIndex()
         {
-            var index = list.FindIndex(x => x.PetName == nameSearch);
+            var index = list.FindIndex(x => x.PetName == NameSearch); // What happens if the names repeats.
             return index;
         }
         public SearchForm()
