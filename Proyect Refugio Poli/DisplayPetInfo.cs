@@ -24,7 +24,7 @@ namespace Proyect_Refugio_Poli
             InitializeComponent();
             list = animal;
             index = aIndex;
-            infoTextBox.Text = $"{list[index].PetName}\r\n";
+            infoTextBox.Text = $"Name: {list[index].PetName}\r\n";
 
          
             // display image in picture box  
