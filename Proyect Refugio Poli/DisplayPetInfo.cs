@@ -30,7 +30,7 @@ namespace Proyect_Refugio_Poli
             // display image in picture box  
             petPictureBox.Image = new Bitmap(list[index].PetPhotoName);
             // image file path  
-            petPictureBox.Text = list[index].PetPhotoName; }
+            petPictureBox.Text = list[index].PetPhotoName;}
             
 
        
