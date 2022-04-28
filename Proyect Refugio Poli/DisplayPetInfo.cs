@@ -25,7 +25,13 @@ namespace Proyect_Refugio_Poli
             list = animal;
             index = aIndex;
             infoTextBox.Text = $"{list[index].PetName}\r\n";
-        }
+
+         
+            // display image in picture box  
+            petPictureBox.Image = new Bitmap(list[index].PetPhotoName);
+            // image file path  
+            petPictureBox.Text = list[index].PetPhotoName; }
+            
 
        
     }

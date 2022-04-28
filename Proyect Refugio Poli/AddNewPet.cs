@@ -33,10 +33,28 @@ namespace Proyect_Refugio_Poli
 
         }
 
+
+
         private void saveButton_Click(object sender, EventArgs e)
         {
             list.Add(animalInfo);
             this.Close();
         }
+
+        private void petPictureBox_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // display image in picture box  
+                petPictureBox.Image = new Bitmap(open.FileName);
+                // image file path  
+                petPictureBox.Text = open.FileName;
+
+                animalInfo.PetPhotoName = open.FileName;
+            }
+        }
     }
+    
 }
