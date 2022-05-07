@@ -66,6 +66,7 @@
             this.modifyAPetToolStripMenuItem.Name = "modifyAPetToolStripMenuItem";
             this.modifyAPetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modifyAPetToolStripMenuItem.Text = "Modify a Pet";
+            this.modifyAPetToolStripMenuItem.Click += new System.EventHandler(this.modifyAPetToolStripMenuItem_Click);
             // 
             // displayPetInfoToolStripMenuItem
             // 
@@ -79,6 +80,7 @@
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
             this.reportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.reportToolStripMenuItem.Text = "Report";
+            this.reportToolStripMenuItem.Click += new System.EventHandler(this.reportToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 

@@ -37,8 +37,11 @@ namespace Proyect_Refugio_Poli
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            list.Add(animalInfo);
-            this.Close();
+            if (petNameTextBox.Text != String.Empty && petPictureBox.Text != String.Empty)
+            {
+                list.Add(animalInfo);
+                this.Close();
+            }
         }
 
         private void petPictureBox_Click(object sender, EventArgs e)

@@ -12,9 +12,9 @@ namespace Proyect_Refugio_Poli
 {
     public partial class SearchForm : Form
     {
-       
-        //private bool close= false;
+      
         private DisplayPetInfo displaypet;
+        private ModifyForm modifyform;
         private List<AnimalInfo> list = new List<AnimalInfo>();
         int senderInput;
 
@@ -44,11 +44,17 @@ namespace Proyect_Refugio_Poli
         {
             switch(senderInput)
             {
+                case 2:
+                    modifyform = new ModifyForm(list, selected());
+                    modifyform.Show();
+                    this.Close();
+                 break;
                 case 3:
                 displaypet = new DisplayPetInfo(list, selected());
                 displaypet.Show();
                 this.Close();
                     break;
+                 
             }
         }
 

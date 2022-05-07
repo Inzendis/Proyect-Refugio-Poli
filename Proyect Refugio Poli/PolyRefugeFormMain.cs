@@ -16,6 +16,7 @@ namespace Proyect_Refugio_Poli
         List<AnimalInfo> animalList = new List<AnimalInfo>();
         private AddNewPet addpet;
         private SearchForm searchform;
+        private ReportForm reportform;
         private int SenderInput()
         {
             return 0;
@@ -41,7 +42,9 @@ namespace Proyect_Refugio_Poli
 
         private void EnterApp(object sender, EventArgs e)
         {
+            animalList.Sort((x, y) => y.PetName.CompareTo(x.PetName));
             CurrentAnimals();
+           
         }
 
         private void addNewPetToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,13 +52,27 @@ namespace Proyect_Refugio_Poli
             addpet = new AddNewPet(animalList);
             addpet.Show();
             
+            
         }
 
         private void displayPetInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             searchform = new SearchForm(animalList,3);
             searchform.Show();
+           
 
+        }
+
+        private void modifyAPetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            searchform = new SearchForm(animalList, 2);
+            searchform.Show();
+        }
+
+        private void reportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            reportform = new ReportForm(animalList);
+            reportform.Show();  
         }
     }
 }
