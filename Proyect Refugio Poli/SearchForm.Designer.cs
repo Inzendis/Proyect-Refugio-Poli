@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.searchPetNameTextBox = new System.Windows.Forms.TextBox();
             this.enterButton = new System.Windows.Forms.Button();
+            this.animalComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -42,18 +42,9 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter Pet Name:";
             // 
-            // searchPetNameTextBox
-            // 
-            this.searchPetNameTextBox.Location = new System.Drawing.Point(147, 83);
-            this.searchPetNameTextBox.Name = "searchPetNameTextBox";
-            this.searchPetNameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.searchPetNameTextBox.TabIndex = 1;
-            this.searchPetNameTextBox.TextChanged += new System.EventHandler(this.searchPetNameTextBox_TextChanged);
-            this.searchPetNameTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.enterButton_KeyDown);
-            // 
             // enterButton
             // 
-            this.enterButton.Location = new System.Drawing.Point(275, 75);
+            this.enterButton.Location = new System.Drawing.Point(331, 75);
             this.enterButton.Name = "enterButton";
             this.enterButton.Size = new System.Drawing.Size(54, 35);
             this.enterButton.TabIndex = 2;
@@ -61,13 +52,22 @@
             this.enterButton.UseVisualStyleBackColor = true;
             this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
             // 
+            // animalComboBox
+            // 
+            this.animalComboBox.FormattingEnabled = true;
+            this.animalComboBox.Location = new System.Drawing.Point(147, 83);
+            this.animalComboBox.Name = "animalComboBox";
+            this.animalComboBox.Size = new System.Drawing.Size(166, 21);
+            this.animalComboBox.TabIndex = 3;
+            this.animalComboBox.SelectedIndexChanged += new System.EventHandler(this.animalComboBox_SelectedIndexChanged);
+            // 
             // SearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 218);
+            this.Controls.Add(this.animalComboBox);
             this.Controls.Add(this.enterButton);
-            this.Controls.Add(this.searchPetNameTextBox);
             this.Controls.Add(this.label1);
             this.Name = "SearchForm";
             this.Text = "SearchForm";
@@ -79,7 +79,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox searchPetNameTextBox;
         private System.Windows.Forms.Button enterButton;
+        private System.Windows.Forms.ComboBox animalComboBox;
     }
 }

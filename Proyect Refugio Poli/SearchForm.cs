@@ -12,16 +12,15 @@ namespace Proyect_Refugio_Poli
 {
     public partial class SearchForm : Form
     {
-        private string nameSearch;
-        //private bool close= false;
+      
         private DisplayPetInfo displaypet;
+        private ModifyForm modifyform;
         private List<AnimalInfo> list = new List<AnimalInfo>();
         int senderInput;
 
-        public int getIndex()
+        public int selected()
         {
-            var index = list.FindIndex(x => x.PetName == NameSearch); // What happens if the names repeats.
-            return index;
+            return animalComboBox.SelectedIndex;
         }
         public SearchForm()
         {
@@ -33,34 +32,30 @@ namespace Proyect_Refugio_Poli
             InitializeComponent();
             list = animal;
             senderInput = aSenderInput;
+            for (int i = 0; i < list.Count; i++)
+            {
+                animalComboBox.Items.Add(list[i].PetName + ' ' + list[i].DateEntry);
+            }
             
         }
 
-
-        public string NameSearch { get => nameSearch; set => nameSearch = value; }
-
-        private void searchPetNameTextBox_TextChanged(object sender, EventArgs e)
-        {
-            NameSearch = searchPetNameTextBox.Text;
-            
-        }
 
         private void enterButton_Click(object sender, EventArgs e)
         {
-            NameSearch = searchPetNameTextBox.Text;
-            
-                if (getIndex() == -1)
-                {
-                    MessageBox.Show("Error", "Animal not found.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else if(senderInput == 3 && getIndex() >= 0)
-                {
-                    displaypet = new DisplayPetInfo(list, getIndex());
-                    displaypet.Show();
+            switch(senderInput)
+            {
+                case 2:
+                    modifyform = new ModifyForm(list, selected());
+                    modifyform.Show();
                     this.Close();
-                }
-             
-
+                 break;
+                case 3:
+                displaypet = new DisplayPetInfo(list, selected());
+                displaypet.Show();
+                this.Close();
+                    break;
+                 
+            }
         }
 
         private void enterButton_KeyDown(object sender, KeyEventArgs e)
@@ -70,6 +65,12 @@ namespace Proyect_Refugio_Poli
             {
                 enterButton.PerformClick();
             }
+        }
+
+        private void animalComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+            
         }
     }
 }
