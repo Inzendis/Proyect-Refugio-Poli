@@ -26,19 +26,74 @@ namespace Proyect_Refugio_Poli
             InitializeComponent();
             list = animal;
         }
-
-        private void petNameTextBox_TextChanged(object sender, EventArgs e)
+        private void GenderCheck(object sender, EventArgs e)
         {
-            animalInfo.PetName = petNameTextBox.Text;
+            
+            try
+            {
+                if (genderComboBox.Text != string.Empty)
+                {
+                    if (genderComboBox.Text == "male" || genderComboBox.Text == "female")
+                    {
+                       
+                    }
+                    else
+                    {
+                        throw new FormatException();
+                    }
+                }
+               
 
+            }catch(FormatException)
+            {
+                MessageBox.Show("Invalid gender answer.", "Error");
+                genderComboBox.Focus();
+            }
         }
 
+        private void IsSterilized(object sender, EventArgs e)
+        {
+            try
+            {
+                if (sterilizedComboBox.Text != string.Empty)
+                {
+                    if (sterilizedComboBox.Text == "Yes" || sterilizedComboBox.Text == "No")
+                    {
+                       
+                    }
+                    else
+                    {
+                        throw new FormatException();
+                    }
+                }
+            }
+            catch(FormatException)
+            {
+                MessageBox.Show("Invalid sterilized answer.", "Error");
+                genderComboBox.Focus();
+            }
+        }
 
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            if (petNameTextBox.Text != String.Empty && petPictureBox.Text != String.Empty)
+            if (petNameTextBox.Text != String.Empty && petPictureBox.Text != String.Empty && petColorTextBox.Text != string.Empty && genderComboBox.Text != string.Empty
+                && sterilizedComboBox.Text != string.Empty && pedrigreeTextBox.Text != string.Empty && vaccine1TextBox.Text != string.Empty && vaccine2TextBox.Text != string.Empty
+                && vaccine3TextBox.Text != string.Empty)
             {
+                animalInfo.PetName = petNameTextBox.Text;
+                animalInfo.PetType = petTypeComboBox.Text;
+                animalInfo.PetColor = petColorTextBox.Text;
+                animalInfo.Gender = genderComboBox.Text;
+                if (sterilizedComboBox.Text == "Yes")
+                    animalInfo.IsSterilized = true;
+                else
+                    animalInfo.IsSterilized = false;
+                animalInfo.Pedigree = pedrigreeTextBox.Text;
+                animalInfo.DateEntry = dateTimePicker.Text; // Please fix
+                animalInfo.Vaccine.Add(vaccine1TextBox.Text);
+                animalInfo.Vaccine.Add(vaccine2TextBox.Text);
+                animalInfo.Vaccine.Add(vaccine3TextBox.Text);
                 list.Add(animalInfo);
                 this.Close();
             }
@@ -57,6 +112,11 @@ namespace Proyect_Refugio_Poli
 
                 animalInfo.PetPhotoName = open.FileName;
             }
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
     
