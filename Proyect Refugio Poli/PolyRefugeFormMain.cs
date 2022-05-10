@@ -16,7 +16,7 @@ namespace Proyect_Refugio_Poli
         List<AnimalInfo> animalList = new List<AnimalInfo>();
         private AddNewPet addpet;
         private SearchForm searchform;
-        private ReportForm reportform;
+        private SearchDate searchdate;
         
         private void CurrentAnimals()
         {
@@ -67,8 +67,9 @@ namespace Proyect_Refugio_Poli
 
         private void reportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            reportform = new ReportForm(animalList);
-            reportform.Show();  
+           
+            searchdate = new SearchDate(animalList);
+            searchdate.Show();  
         }
     }
 }
