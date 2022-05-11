@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyect_Refugio_Poli
+namespace Proyecto_Poli_Refugio
 {
     public partial class SearchForm : Form
     {
@@ -65,12 +65,6 @@ namespace Proyect_Refugio_Poli
             {
                 enterButton.PerformClick();
             }
-        }
-
-        private void animalComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-            
         }
     }
 }

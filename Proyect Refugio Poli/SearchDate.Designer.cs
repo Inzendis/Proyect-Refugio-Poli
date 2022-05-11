@@ -1,4 +1,4 @@
-﻿namespace Proyect_Refugio_Poli
+﻿namespace Proyecto_Poli_Refugio
 {
     partial class SearchDate
     {
@@ -35,7 +35,7 @@
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(526, 245);
+            this.closeButton.Location = new System.Drawing.Point(263, 147);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(65, 28);
             this.closeButton.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             // searchDateButton
             // 
-            this.searchDateButton.Location = new System.Drawing.Point(375, 121);
+            this.searchDateButton.Location = new System.Drawing.Point(171, 70);
             this.searchDateButton.Name = "searchDateButton";
             this.searchDateButton.Size = new System.Drawing.Size(65, 28);
             this.searchDateButton.TabIndex = 1;
@@ -56,19 +56,19 @@
             // searchDatePicker
             // 
             this.searchDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.searchDatePicker.Location = new System.Drawing.Point(276, 123);
+            this.searchDatePicker.Location = new System.Drawing.Point(85, 72);
             this.searchDatePicker.MaxDate = new System.DateTime(2026, 5, 7, 0, 0, 0, 0);
             this.searchDatePicker.MinDate = new System.DateTime(2022, 5, 7, 0, 0, 0, 0);
             this.searchDatePicker.Name = "searchDatePicker";
             this.searchDatePicker.Size = new System.Drawing.Size(80, 20);
             this.searchDatePicker.TabIndex = 2;
-            this.searchDatePicker.Value = new System.DateTime(2022, 5, 9, 0, 0, 0, 0);
+            this.searchDatePicker.Value = new System.DateTime(2022, 5, 7, 0, 0, 0, 0);
             // 
             // SearchDate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 285);
+            this.ClientSize = new System.Drawing.Size(349, 190);
             this.Controls.Add(this.searchDatePicker);
             this.Controls.Add(this.searchDateButton);
             this.Controls.Add(this.closeButton);

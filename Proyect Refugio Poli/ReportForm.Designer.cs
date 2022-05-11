@@ -1,4 +1,4 @@
-﻿namespace Proyect_Refugio_Poli
+﻿namespace Proyecto_Poli_Refugio
 {
     partial class ReportForm
     {
@@ -81,7 +81,7 @@
             // 
             // animalInfoBindingSource
             // 
-            this.animalInfoBindingSource.DataSource = typeof(Proyect_Refugio_Poli.AnimalInfo);
+            this.animalInfoBindingSource.DataSource = typeof(Proyecto_Poli_Refugio.AnimalInfo);
             // 
             // petNameDataGridViewTextBoxColumn
             // 

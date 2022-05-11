@@ -1,4 +1,4 @@
-﻿namespace Proyect_Refugio_Poli
+﻿namespace Proyecto_Poli_Refugio
 {
     partial class SearchForm
     {
@@ -59,7 +59,6 @@
             this.animalComboBox.Name = "animalComboBox";
             this.animalComboBox.Size = new System.Drawing.Size(166, 21);
             this.animalComboBox.TabIndex = 3;
-            this.animalComboBox.SelectedIndexChanged += new System.EventHandler(this.animalComboBox_SelectedIndexChanged);
             // 
             // SearchForm
             // 

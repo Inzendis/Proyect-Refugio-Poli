@@ -1,4 +1,4 @@
-﻿namespace Proyect_Refugio_Poli
+﻿namespace Proyecto_Poli_Refugio
 {
     partial class ModifyForm
     {

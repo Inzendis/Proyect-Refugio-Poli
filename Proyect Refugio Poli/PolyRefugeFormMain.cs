@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyect_Refugio_Poli
+namespace Proyecto_Poli_Refugio
 {//Christian Santiago Valentin #120535
     public partial class PolyRefugeFormMain : Form
     {
@@ -70,6 +70,21 @@ namespace Proyect_Refugio_Poli
            
             searchdate = new SearchDate(animalList);
             searchdate.Show();  
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void helpContentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
