@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.exitButton = new System.Windows.Forms.Button();
             this.animalDataGridView = new System.Windows.Forms.DataGridView();
-            this.animalInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.petNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.petPhotoNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.petTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,13 +41,14 @@
             this.Vaccine1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Vaccine2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Vaccine3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.animalInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.animalDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalInfoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(856, 432);
+            this.exitButton.Location = new System.Drawing.Point(856, 444);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(75, 23);
             this.exitButton.TabIndex = 1;
@@ -78,10 +78,6 @@
             this.animalDataGridView.ReadOnly = true;
             this.animalDataGridView.Size = new System.Drawing.Size(823, 414);
             this.animalDataGridView.TabIndex = 2;
-            // 
-            // animalInfoBindingSource
-            // 
-            this.animalInfoBindingSource.DataSource = typeof(Proyecto_Poli_Refugio.AnimalInfo);
             // 
             // petNameDataGridViewTextBoxColumn
             // 
@@ -151,6 +147,10 @@
             this.Vaccine3.HeaderText = "Vaccine 3";
             this.Vaccine3.Name = "Vaccine3";
             this.Vaccine3.ReadOnly = true;
+            // 
+            // animalInfoBindingSource
+            // 
+            this.animalInfoBindingSource.DataSource = typeof(Proyecto_Poli_Refugio.AnimalInfo);
             // 
             // ReportForm
             // 

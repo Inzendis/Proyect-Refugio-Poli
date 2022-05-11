@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.enterButton = new System.Windows.Forms.Button();
             this.animalComboBox = new System.Windows.Forms.ComboBox();
+            this.closeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -60,11 +61,22 @@
             this.animalComboBox.Size = new System.Drawing.Size(166, 21);
             this.animalComboBox.TabIndex = 3;
             // 
+            // closeButton
+            // 
+            this.closeButton.Location = new System.Drawing.Point(339, 178);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(65, 28);
+            this.closeButton.TabIndex = 4;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
             // SearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 218);
+            this.Controls.Add(this.closeButton);
             this.Controls.Add(this.animalComboBox);
             this.Controls.Add(this.enterButton);
             this.Controls.Add(this.label1);
@@ -80,5 +92,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button enterButton;
         private System.Windows.Forms.ComboBox animalComboBox;
+        private System.Windows.Forms.Button closeButton;
     }
 }
