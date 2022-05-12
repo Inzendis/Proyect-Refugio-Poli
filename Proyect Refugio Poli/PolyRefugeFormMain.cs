@@ -17,6 +17,8 @@ namespace Proyecto_Poli_Refugio
         private AddNewPet addpet;
         private SearchForm searchform;
         private SearchDate searchdate;
+        private AboutForm aboutform;
+        private HelpContents helpcontents;
         
         private void CurrentAnimals()
         {
@@ -79,17 +81,16 @@ namespace Proyecto_Poli_Refugio
 
         private void helpContentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            helpcontents = new HelpContents();
+            helpcontents.Show();
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            aboutform = new AboutForm();
+            aboutform.Show();
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+       
     }
 }
