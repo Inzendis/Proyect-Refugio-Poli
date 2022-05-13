@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.exitButton = new System.Windows.Forms.Button();
             this.animalDataGridView = new System.Windows.Forms.DataGridView();
+            this.animalInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.petNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.petPhotoNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.petTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.petColorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,7 +41,6 @@
             this.Vaccine1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Vaccine2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Vaccine3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.animalInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.animalDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.animalInfoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +61,6 @@
             this.animalDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.animalDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.petNameDataGridViewTextBoxColumn,
-            this.petPhotoNameDataGridViewTextBoxColumn,
             this.petTypeDataGridViewTextBoxColumn,
             this.petColorDataGridViewTextBoxColumn,
             this.genderDataGridViewTextBoxColumn,
@@ -79,21 +77,16 @@
             this.animalDataGridView.Size = new System.Drawing.Size(823, 414);
             this.animalDataGridView.TabIndex = 2;
             // 
+            // animalInfoBindingSource
+            // 
+            this.animalInfoBindingSource.DataSource = typeof(Proyecto_Poli_Refugio.AnimalInfo);
+            // 
             // petNameDataGridViewTextBoxColumn
             // 
             this.petNameDataGridViewTextBoxColumn.DataPropertyName = "PetName";
             this.petNameDataGridViewTextBoxColumn.HeaderText = "Pet Name";
             this.petNameDataGridViewTextBoxColumn.Name = "petNameDataGridViewTextBoxColumn";
             this.petNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // petPhotoNameDataGridViewTextBoxColumn
-            // 
-            this.petPhotoNameDataGridViewTextBoxColumn.DataPropertyName = "PetPhotoName";
-            this.petPhotoNameDataGridViewTextBoxColumn.HeaderText = "Pet Photo Name";
-            this.petPhotoNameDataGridViewTextBoxColumn.MinimumWidth = 100;
-            this.petPhotoNameDataGridViewTextBoxColumn.Name = "petPhotoNameDataGridViewTextBoxColumn";
-            this.petPhotoNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.petPhotoNameDataGridViewTextBoxColumn.Width = 200;
             // 
             // petTypeDataGridViewTextBoxColumn
             // 
@@ -148,10 +141,6 @@
             this.Vaccine3.Name = "Vaccine3";
             this.Vaccine3.ReadOnly = true;
             // 
-            // animalInfoBindingSource
-            // 
-            this.animalInfoBindingSource.DataSource = typeof(Proyecto_Poli_Refugio.AnimalInfo);
-            // 
             // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,7 +162,6 @@
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.DataGridView animalDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn petNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn petPhotoNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn petTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn petColorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
