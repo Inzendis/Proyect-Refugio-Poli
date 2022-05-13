@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{76A77C15-B88A-42D5-9E67-1666E8A2A96D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Proyect_Refugio_Poli</RootNamespace>
-    <AssemblyName>Proyect Refugio Poli</AssemblyName>
+    <RootNamespace>Proyecto_Poli_Refugio</RootNamespace>
+    <AssemblyName>Proyecto Poli Refugio</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,12 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AnimalInfo.cs" />
     <Compile Include="DisplayPetInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DisplayPetInfo.Designer.cs">
       <DependentUpon>DisplayPetInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpContents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpContents.Designer.cs">
+      <DependentUpon>HelpContents.cs</DependentUpon>
     </Compile>
     <Compile Include="ModifyForm.cs">
       <SubType>Form</SubType>
@@ -80,14 +92,26 @@
     <Compile Include="ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SearchDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchDate.Designer.cs">
+      <DependentUpon>SearchDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="SearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SearchForm.Designer.cs">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DisplayPetInfo.resx">
       <DependentUpon>DisplayPetInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpContents.resx">
+      <DependentUpon>HelpContents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModifyForm.resx">
       <DependentUpon>ModifyForm.cs</DependentUpon>
@@ -106,9 +130,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchDate.resx">
+      <DependentUpon>SearchDate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchForm.resx">
       <DependentUpon>SearchForm.cs</DependentUpon>

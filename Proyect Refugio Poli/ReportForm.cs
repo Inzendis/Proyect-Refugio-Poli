@@ -8,21 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyect_Refugio_Poli
+namespace Proyecto_Poli_Refugio
 {
     public partial class ReportForm : Form
     {
         private List<AnimalInfo> list = new List<AnimalInfo>();
-        int count = 0;
+        private string dateToSearch;
+       
         public ReportForm()
         {
             InitializeComponent();
         }
-        public ReportForm(List<AnimalInfo> alist)
+        public ReportForm(List<AnimalInfo> alist, string aDate)
         {
             InitializeComponent();
             list = alist;
-            count = list.Count();
+            dateToSearch = aDate;
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -30,12 +31,31 @@ namespace Proyect_Refugio_Poli
             this.Close();
         }
 
+        //DataGridView
         private void DataGridView_Update(object sender, EventArgs e)
         {
-            for (int i = 1; i <= count; i++)
+            List<AnimalInfo> listToShow = new List<AnimalInfo>();
+            
+
+            for (int i = 0; i < list.Count; i++)
             {
-               // animalDataGridView.Rows.Add(list[i].PetName, list[i].PetPhotoName, list[i].PetType, list[i].PetColor, list[i].Gender, list[i].IsSterilized, list[i].Pedigree, list[i].DateEntry);
+
+                if (list[i].DateEntry == dateToSearch)
+                {
+                    listToShow.Add(list[i]);
+                   
+                }
             }
+
+            animalDataGridView.DataSource = listToShow;
+            for (int i = 0; i < listToShow.Count; i++)
+            {
+                animalDataGridView.Rows[i].Cells["Vaccine1"].Value = listToShow[i].Vaccine[0];
+                animalDataGridView.Rows[i].Cells["Vaccine2"].Value = listToShow[i].Vaccine[1];
+                animalDataGridView.Rows[i].Cells["Vaccine3"].Value = listToShow[i].Vaccine[2];
+            }
+ 
+
         }
     }
 }

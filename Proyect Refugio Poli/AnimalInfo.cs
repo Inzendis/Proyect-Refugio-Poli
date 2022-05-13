@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Proyect_Refugio_Poli
+namespace Proyecto_Poli_Refugio
 {
     public class AnimalInfo
     {

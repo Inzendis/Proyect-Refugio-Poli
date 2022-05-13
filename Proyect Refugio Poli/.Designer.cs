@@ -1,4 +1,4 @@
-﻿namespace Proyect_Refugio_Poli
+﻿namespace Proyecto_Poli_Refugio
 {
     partial class PolyRefugeFormMain
     {
@@ -87,6 +87,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -102,12 +103,14 @@
             this.helpContentsToolStripMenuItem.Name = "helpContentsToolStripMenuItem";
             this.helpContentsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.helpContentsToolStripMenuItem.Text = "Help Contents";
+            this.helpContentsToolStripMenuItem.Click += new System.EventHandler(this.helpContentsToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
@@ -123,7 +126,7 @@
             // currentAnimalsTextBox
             // 
             this.currentAnimalsTextBox.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.currentAnimalsTextBox.Location = new System.Drawing.Point(522, 45);
+            this.currentAnimalsTextBox.Location = new System.Drawing.Point(543, 38);
             this.currentAnimalsTextBox.Multiline = true;
             this.currentAnimalsTextBox.Name = "currentAnimalsTextBox";
             this.currentAnimalsTextBox.ReadOnly = true;

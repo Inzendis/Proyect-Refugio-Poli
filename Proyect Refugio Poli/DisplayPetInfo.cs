@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyect_Refugio_Poli
+namespace Proyecto_Poli_Refugio
 {
     public partial class DisplayPetInfo : Form
     {
