@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Proyect_Refugio_Poli
+namespace Proyecto_Poli_Refugio
 {
     public class AnimalInfo
     {
@@ -15,7 +15,7 @@ namespace Proyect_Refugio_Poli
         private string gender;
         private bool isSterilized;
         private string pedigree;
-        private DateTime dateEntry;
+        private string dateEntry;
         private List<string> vaccine;
 
 
@@ -28,7 +28,7 @@ namespace Proyect_Refugio_Poli
             Gender = string.Empty;
             isSterilized = false;
             Pedigree = string.Empty;
-            DateEntry = new DateTime();
+            DateEntry = string.Empty;
             Vaccine = new List<string>();
         }
 
@@ -39,7 +39,7 @@ namespace Proyect_Refugio_Poli
         public string Gender { get => gender; set => gender = value; }
         public bool IsSterilized { get => isSterilized; set => isSterilized = value; }
         public string Pedigree { get => pedigree; set => pedigree = value; }
-        public DateTime DateEntry { get => dateEntry; set => dateEntry = value; }
+        public string DateEntry { get => dateEntry; set => dateEntry = value; }
 
         public List<string> Vaccine { get => vaccine; set => vaccine = value; }
     }

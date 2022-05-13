@@ -69,6 +69,7 @@ namespace Proyecto_Poli_Refugio
 
         private void reportToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
             searchdate = new SearchDate(animalList);
             searchdate.Show();  
         }
