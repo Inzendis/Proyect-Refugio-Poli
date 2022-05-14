@@ -118,7 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="textBox2.Text" xml:space="preserve">
-    <value>Used to modify an existing pet. You don’t have to fill all the content and will only apply a change if the data given is different from the previous data of the pet. The contents also include a verification of values that will determine if the data given is valid.
+    <value>Used to modify an existing pet. Will only apply a change if the data given is different from the previous data of the pet. The contents also include a verification of values that will determine if the data given is valid.
+
+</value>
+  </data>
+  <data name="textBox3.Text" xml:space="preserve">
+    <value>When choosing Modify a Pet or Display Pet Info a Search form will be shown and you can select the pet that you was to display or modify. The search includes the date and pedigree of the pet to avoid incorrect searches.
 
 </value>
   </data>

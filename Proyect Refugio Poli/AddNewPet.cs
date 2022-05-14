@@ -137,6 +137,10 @@ namespace Proyecto_Poli_Refugio
                 list.Add(animalInfo);
                 this.Close();
             }
+            else
+            {
+                MessageBox.Show("Missing information.", "Error");
+            }
         }
 
         private void petPictureBox_Click(object sender, EventArgs e)

@@ -23,18 +23,29 @@ namespace Proyecto_Poli_Refugio
         {
             InitializeComponent();
             list = aList;
+            searchDateButton.Select();
+            searchDateButton.Focus();
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
-        {
-            this.Close();   
-        }
 
         private void searchDateButton_Click(object sender, EventArgs e)
         {
-            string date = searchDatePicker.Text;
-            reportform = new ReportForm(list, date);
-            reportform.Show();
+                string date = searchDatePicker.Text;
+                reportform = new ReportForm(list, date);
+                reportform.Show();
+                this.Close();      
+        }
+
+        private void enterButton_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+               searchDateButton.PerformClick();
+            }
+        }
+        private void closeButton_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

@@ -48,29 +48,32 @@ namespace Proyecto_Poli_Refugio
         }
         private void saveChangesButton_Click(object sender, EventArgs e)
         {
-            Modlist[animalIndex].PetName = petNameTextBox.Text;
-            Modlist[animalIndex].PetType = petTypeComboBox.Text;
-            Modlist[animalIndex].PetColor = petColorTextBox.Text;
-            Modlist[animalIndex].Gender = genderComboBox.Text;  
-            
-            if (sterilizedComboBox.Text == "Yes")
+            if (petNameTextBox.Text != String.Empty && petPictureBox.Text != String.Empty && petColorTextBox.Text != string.Empty && genderComboBox.Text != string.Empty
+                && sterilizedComboBox.Text != string.Empty && pedrigreeTextBox.Text != string.Empty && vaccine1TextBox.Text != string.Empty && vaccine2TextBox.Text != string.Empty
+                && vaccine3TextBox.Text != string.Empty)
             {
-                Modlist[animalIndex].IsSterilized = true;
-            }
-            else if (sterilizedComboBox.Text == "No")
-            {
-                Modlist[animalIndex].IsSterilized = false;
-            }
-            Modlist[animalIndex].Pedigree = pedrigreeTextBox.Text;
-            Modlist[animalIndex].DateEntry = dateTimePicker.Text;
-   
-            Modlist[animalIndex].Vaccine[0] = vaccine1TextBox.Text;
-            Modlist[animalIndex].Vaccine[1] = vaccine2TextBox.Text;
-            Modlist[animalIndex].Vaccine[2] = vaccine3TextBox.Text;
-            Modlist[animalIndex].PetPhotoName = petPictureBox.Text;
-            
+                Modlist[animalIndex].PetName = petNameTextBox.Text;
+                Modlist[animalIndex].PetType = petTypeComboBox.Text;
+                Modlist[animalIndex].PetColor = petColorTextBox.Text;
+                Modlist[animalIndex].Gender = genderComboBox.Text;
 
-            this.Close();
+                if (sterilizedComboBox.Text == "Yes")
+                {
+                    Modlist[animalIndex].IsSterilized = true;
+                }
+                else if (sterilizedComboBox.Text == "No")
+                {
+                    Modlist[animalIndex].IsSterilized = false;
+                }
+                Modlist[animalIndex].Pedigree = pedrigreeTextBox.Text;
+                Modlist[animalIndex].DateEntry = dateTimePicker.Text;
+
+                Modlist[animalIndex].Vaccine[0] = vaccine1TextBox.Text;
+                Modlist[animalIndex].Vaccine[1] = vaccine2TextBox.Text;
+                Modlist[animalIndex].Vaccine[2] = vaccine3TextBox.Text;
+                Modlist[animalIndex].PetPhotoName = petPictureBox.Text;
+                this.Close();
+            }
         }
 
 

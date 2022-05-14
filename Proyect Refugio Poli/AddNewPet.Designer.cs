@@ -65,14 +65,14 @@
             // 
             // petNameTextBox
             // 
-            this.petNameTextBox.Location = new System.Drawing.Point(69, 35);
+            this.petNameTextBox.Location = new System.Drawing.Point(79, 35);
             this.petNameTextBox.Name = "petNameTextBox";
             this.petNameTextBox.Size = new System.Drawing.Size(112, 20);
             this.petNameTextBox.TabIndex = 1;
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(517, 360);
+            this.saveButton.Location = new System.Drawing.Point(326, 360);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(92, 48);
             this.saveButton.TabIndex = 2;
@@ -83,7 +83,7 @@
             // petPictureBox
             // 
             this.petPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.petPictureBox.Location = new System.Drawing.Point(502, 38);
+            this.petPictureBox.Location = new System.Drawing.Point(300, 21);
             this.petPictureBox.Name = "petPictureBox";
             this.petPictureBox.Size = new System.Drawing.Size(216, 207);
             this.petPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -130,7 +130,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 176);
+            this.label6.Location = new System.Drawing.Point(12, 179);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 8;
@@ -181,7 +181,7 @@
             "rabbit",
             "rodent",
             "bird"});
-            this.petTypeComboBox.Location = new System.Drawing.Point(69, 69);
+            this.petTypeComboBox.Location = new System.Drawing.Point(79, 69);
             this.petTypeComboBox.Name = "petTypeComboBox";
             this.petTypeComboBox.Size = new System.Drawing.Size(112, 21);
             this.petTypeComboBox.TabIndex = 13;
@@ -189,7 +189,7 @@
             // 
             // petColorTextBox
             // 
-            this.petColorTextBox.Location = new System.Drawing.Point(69, 99);
+            this.petColorTextBox.Location = new System.Drawing.Point(79, 99);
             this.petColorTextBox.Name = "petColorTextBox";
             this.petColorTextBox.Size = new System.Drawing.Size(112, 20);
             this.petColorTextBox.TabIndex = 14;
@@ -200,7 +200,7 @@
             this.genderComboBox.Items.AddRange(new object[] {
             "male",
             "female"});
-            this.genderComboBox.Location = new System.Drawing.Point(69, 125);
+            this.genderComboBox.Location = new System.Drawing.Point(79, 125);
             this.genderComboBox.Name = "genderComboBox";
             this.genderComboBox.Size = new System.Drawing.Size(112, 21);
             this.genderComboBox.TabIndex = 15;
@@ -212,7 +212,7 @@
             this.sterilizedComboBox.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.sterilizedComboBox.Location = new System.Drawing.Point(69, 152);
+            this.sterilizedComboBox.Location = new System.Drawing.Point(79, 152);
             this.sterilizedComboBox.Name = "sterilizedComboBox";
             this.sterilizedComboBox.Size = new System.Drawing.Size(112, 21);
             this.sterilizedComboBox.TabIndex = 16;
@@ -220,7 +220,7 @@
             // 
             // pedrigreeTextBox
             // 
-            this.pedrigreeTextBox.Location = new System.Drawing.Point(69, 179);
+            this.pedrigreeTextBox.Location = new System.Drawing.Point(79, 179);
             this.pedrigreeTextBox.Name = "pedrigreeTextBox";
             this.pedrigreeTextBox.Size = new System.Drawing.Size(112, 20);
             this.pedrigreeTextBox.TabIndex = 17;
@@ -229,7 +229,7 @@
             // 
             this.dateTimePicker.CustomFormat = "";
             this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker.Location = new System.Drawing.Point(69, 208);
+            this.dateTimePicker.Location = new System.Drawing.Point(79, 208);
             this.dateTimePicker.MaxDate = new System.DateTime(2025, 5, 7, 0, 0, 0, 0);
             this.dateTimePicker.MinDate = new System.DateTime(2022, 5, 7, 0, 0, 0, 0);
             this.dateTimePicker.Name = "dateTimePicker";
@@ -239,28 +239,28 @@
             // 
             // vaccine1TextBox
             // 
-            this.vaccine1TextBox.Location = new System.Drawing.Point(69, 242);
+            this.vaccine1TextBox.Location = new System.Drawing.Point(79, 242);
             this.vaccine1TextBox.Name = "vaccine1TextBox";
             this.vaccine1TextBox.Size = new System.Drawing.Size(112, 20);
             this.vaccine1TextBox.TabIndex = 19;
             // 
             // vaccine2TextBox
             // 
-            this.vaccine2TextBox.Location = new System.Drawing.Point(69, 271);
+            this.vaccine2TextBox.Location = new System.Drawing.Point(79, 271);
             this.vaccine2TextBox.Name = "vaccine2TextBox";
             this.vaccine2TextBox.Size = new System.Drawing.Size(112, 20);
             this.vaccine2TextBox.TabIndex = 20;
             // 
             // vaccine3TextBox
             // 
-            this.vaccine3TextBox.Location = new System.Drawing.Point(69, 297);
+            this.vaccine3TextBox.Location = new System.Drawing.Point(79, 297);
             this.vaccine3TextBox.Name = "vaccine3TextBox";
             this.vaccine3TextBox.Size = new System.Drawing.Size(112, 20);
             this.vaccine3TextBox.TabIndex = 21;
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(626, 360);
+            this.closeButton.Location = new System.Drawing.Point(424, 360);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(92, 48);
             this.closeButton.TabIndex = 22;
@@ -272,7 +272,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(537, 422);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.vaccine3TextBox);
             this.Controls.Add(this.vaccine2TextBox);

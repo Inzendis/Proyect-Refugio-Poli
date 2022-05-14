@@ -35,7 +35,7 @@
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(263, 147);
+            this.closeButton.Location = new System.Drawing.Point(232, 141);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(65, 28);
             this.closeButton.TabIndex = 0;
@@ -45,18 +45,19 @@
             // 
             // searchDateButton
             // 
-            this.searchDateButton.Location = new System.Drawing.Point(171, 70);
+            this.searchDateButton.Location = new System.Drawing.Point(136, 68);
             this.searchDateButton.Name = "searchDateButton";
             this.searchDateButton.Size = new System.Drawing.Size(65, 28);
             this.searchDateButton.TabIndex = 1;
             this.searchDateButton.Text = "Search";
             this.searchDateButton.UseVisualStyleBackColor = true;
             this.searchDateButton.Click += new System.EventHandler(this.searchDateButton_Click);
+            this.searchDateButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.enterButton_KeyDown);
             // 
             // searchDatePicker
             // 
             this.searchDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.searchDatePicker.Location = new System.Drawing.Point(85, 72);
+            this.searchDatePicker.Location = new System.Drawing.Point(39, 70);
             this.searchDatePicker.MaxDate = new System.DateTime(2026, 5, 7, 0, 0, 0, 0);
             this.searchDatePicker.MinDate = new System.DateTime(2022, 5, 7, 0, 0, 0, 0);
             this.searchDatePicker.Name = "searchDatePicker";
@@ -68,7 +69,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 190);
+            this.ClientSize = new System.Drawing.Size(309, 181);
             this.Controls.Add(this.searchDatePicker);
             this.Controls.Add(this.searchDateButton);
             this.Controls.Add(this.closeButton);

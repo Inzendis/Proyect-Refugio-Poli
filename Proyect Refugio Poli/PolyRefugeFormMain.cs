@@ -98,9 +98,6 @@ namespace Proyecto_Poli_Refugio
             aboutform.Show();
         }
 
-        private void exitButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
     }
 }

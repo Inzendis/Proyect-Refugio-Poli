@@ -24,17 +24,19 @@ namespace Proyecto_Poli_Refugio
             InitializeComponent();
             list = animal;
             index = aIndex;
+        }
+        private void EnterApp(object sender, EventArgs e)
+        {
             infoTextBox.Text = $"Pet Name: {list[index].PetName}\r\nPet Type: {list[index].PetType}\r\n" +
                 $"Color: {list[index].PetColor}\r\nGender: {list[index].Gender}\r\nSterilized: {list[index].IsSterilized}\r\nPedigree: {list[index].Pedigree}\r\n" +
-                $"Date: {list[index].DateEntry}\r\nVaccine 1: {list[index].Vaccine[0]}\r\nVaccine 2:{list[index].Vaccine[1]}\r\nVaccine 3:{list[index].Vaccine[2]}";
-
-         
+                $"Date: {list[index].DateEntry}\r\nVaccine 1: {list[index].Vaccine[0]}\r\nVaccine 2: {list[index].Vaccine[1]}\r\nVaccine 3: {list[index].Vaccine[2]}";
             // display image in picture box  
             petPictureBox.Image = new Bitmap(list[index].PetPhotoName);
             // image file path  
             petPictureBox.Text = list[index].PetPhotoName;
+            closeButton.Focus();
+            closeButton.Select();
         }
-
         private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();

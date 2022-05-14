@@ -37,18 +37,18 @@
             // infoTextBox
             // 
             this.infoTextBox.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infoTextBox.Location = new System.Drawing.Point(46, 50);
+            this.infoTextBox.Location = new System.Drawing.Point(46, 40);
             this.infoTextBox.Multiline = true;
             this.infoTextBox.Name = "infoTextBox";
             this.infoTextBox.ReadOnly = true;
             this.infoTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.infoTextBox.Size = new System.Drawing.Size(319, 324);
+            this.infoTextBox.Size = new System.Drawing.Size(319, 242);
             this.infoTextBox.TabIndex = 0;
             // 
             // petPictureBox
             // 
             this.petPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.petPictureBox.Location = new System.Drawing.Point(524, 40);
+            this.petPictureBox.Location = new System.Drawing.Point(390, 40);
             this.petPictureBox.Name = "petPictureBox";
             this.petPictureBox.Size = new System.Drawing.Size(216, 207);
             this.petPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -57,7 +57,7 @@
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(666, 347);
+            this.closeButton.Location = new System.Drawing.Point(532, 255);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(74, 27);
             this.closeButton.TabIndex = 5;
@@ -70,12 +70,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(755, 393);
+            this.ClientSize = new System.Drawing.Size(650, 301);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.petPictureBox);
             this.Controls.Add(this.infoTextBox);
             this.Name = "DisplayPetInfo";
             this.Text = "DisplayPetInfo";
+            this.Activated += new System.EventHandler(this.EnterApp);
             ((System.ComponentModel.ISupportInitialize)(this.petPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
