@@ -34,20 +34,12 @@ namespace Proyecto_Poli_Refugio
         //Checks that only combo box options are selected in PetType
         private void PetTypeCheck(object sender, EventArgs e)
         {
-            bool found = false; 
                 try
                 {
                     if (petTypeComboBox.Text != string.Empty)
                     {
-                        foreach (string petType in petTypeComboBox.Items) 
-                        {
-                            if (petType == (string)petTypeComboBox.SelectedItem) // If the selected item matches the items in combo box
-                            {
-                                found = true;
-                                break;
-                            }
-                        }
-                        if (found == false) // The combo box contains a string not contained in the items of the combo box
+                       
+                        if (petTypeComboBox.SelectedIndex <= -1)
                         {
                             throw new FormatException();
                         }
@@ -64,23 +56,17 @@ namespace Proyecto_Poli_Refugio
         //Checks that only combo box options are selected in Gender
         private void GenderCheck(object sender, EventArgs e)
         {
-            bool found = false;
+            
             try
             {
                 if (genderComboBox.Text != string.Empty)
                 {
-                    foreach(string petGender in genderComboBox.Items)
-                    {
-                        if (petGender == (string)genderComboBox.SelectedItem) // If the selected item matches the items in combo box
-                        {
-                            found = true;
-                            break;
-                        }
-                    }
-                    if (found == false)// The combo box contains a string not contained in the items of the combo box
+
+                    if (genderComboBox.SelectedIndex <= -1)
                     {
                         throw new FormatException();
-                    }             
+                    }
+                               
                 }
                
 
@@ -95,23 +81,16 @@ namespace Proyecto_Poli_Refugio
         //Checks that only combo box options are selected in IsSterilized
         private void IsSterilized(object sender, EventArgs e)
         {
-            bool found = false;
+            
             try
             {
                 if (sterilizedComboBox.Text != string.Empty)
                 {
-                    foreach (string answer in sterilizedComboBox.Items)
-                    {
-                        if (answer == (string)sterilizedComboBox.SelectedItem)// If the selected item matches the items in combo box
-                        {
-                            found = true;
-                            break;
-                        }
-                    }
-                    if (found == false)// The combo box contains a string not contained in the items of the combo box
+                    if (sterilizedComboBox.SelectedIndex <= -1)
                     {
                         throw new FormatException();
                     }
+                    
                 }
 
             }

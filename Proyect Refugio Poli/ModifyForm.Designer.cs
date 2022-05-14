@@ -102,6 +102,7 @@
             this.petTypeComboBox.Name = "petTypeComboBox";
             this.petTypeComboBox.Size = new System.Drawing.Size(112, 21);
             this.petTypeComboBox.TabIndex = 14;
+            this.petTypeComboBox.Leave += new System.EventHandler(this.PetTypeCheck);
             // 
             // label3
             // 
@@ -138,6 +139,7 @@
             this.genderComboBox.Name = "genderComboBox";
             this.genderComboBox.Size = new System.Drawing.Size(112, 21);
             this.genderComboBox.TabIndex = 22;
+            this.genderComboBox.Leave += new System.EventHandler(this.GenderCheck);
             // 
             // label5
             // 
@@ -158,6 +160,7 @@
             this.sterilizedComboBox.Name = "sterilizedComboBox";
             this.sterilizedComboBox.Size = new System.Drawing.Size(112, 21);
             this.sterilizedComboBox.TabIndex = 25;
+            this.sterilizedComboBox.Leave += new System.EventHandler(this.IsSterilized);
             // 
             // label6
             // 
