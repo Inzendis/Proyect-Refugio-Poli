@@ -26,21 +26,53 @@ namespace Proyecto_Poli_Refugio
             InitializeComponent();
             list = animal;
         }
+        private void PetTypeCheck(object sender, EventArgs e)
+        {
+            bool found = false; 
+                try
+                {
+                    if (petTypeComboBox.Text != string.Empty)
+                    {
+                        foreach (string petType in petTypeComboBox.Items)
+                        {
+                            if (petType == (string)petTypeComboBox.SelectedItem)
+                            {
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (found == false)
+                        {
+                            throw new FormatException();
+                        }
+                    }
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Invalid pet type answer.", "Error");
+                    petTypeComboBox.Focus();
+                    petTypeComboBox.SelectAll();
+                }
+        }
         private void GenderCheck(object sender, EventArgs e)
         {
-            
+            bool found = false;
             try
             {
                 if (genderComboBox.Text != string.Empty)
                 {
-                    if (genderComboBox.Text == "male" || genderComboBox.Text == "female")
+                    foreach(string petGender in genderComboBox.Items)
                     {
-                       
+                        if (petGender == (string)genderComboBox.SelectedItem)
+                        {
+                            found = true;
+                            break;
+                        }
                     }
-                    else
+                    if (found == false)
                     {
                         throw new FormatException();
-                    }
+                    }             
                 }
                
 
@@ -48,29 +80,37 @@ namespace Proyecto_Poli_Refugio
             {
                 MessageBox.Show("Invalid gender answer.", "Error");
                 genderComboBox.Focus();
+                genderComboBox.SelectAll();
             }
         }
 
         private void IsSterilized(object sender, EventArgs e)
         {
+            bool found = false;
             try
             {
                 if (sterilizedComboBox.Text != string.Empty)
                 {
-                    if (sterilizedComboBox.Text == "Yes" || sterilizedComboBox.Text == "No")
+                    foreach (string answer in sterilizedComboBox.Items)
                     {
-                       
+                        if (answer == (string)sterilizedComboBox.SelectedItem)
+                        {
+                            found = true;
+                            break;
+                        }
                     }
-                    else
+                    if (found == false)
                     {
                         throw new FormatException();
                     }
                 }
+
             }
-            catch(FormatException)
+            catch (FormatException)
             {
                 MessageBox.Show("Invalid sterilized answer.", "Error");
-                genderComboBox.Focus();
+                sterilizedComboBox.Focus();
+                sterilizedComboBox.SelectAll();
             }
         }
 
@@ -112,6 +152,7 @@ namespace Proyecto_Poli_Refugio
 
                 animalInfo.PetPhotoName = open.FileName;
             }
+            
         }
 
         private void closeButton_Click(object sender, EventArgs e)

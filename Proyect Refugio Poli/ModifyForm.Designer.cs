@@ -31,22 +31,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.petNameTextBox = new System.Windows.Forms.TextBox();
             this.saveChangesButton = new System.Windows.Forms.Button();
-            this.previousPetName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.petTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.previousPetTypeLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.petColorTextBox = new System.Windows.Forms.TextBox();
-            this.previousPetColorLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.previousPetGenderLabel = new System.Windows.Forms.Label();
             this.genderComboBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.previousIsSterilizedLabel = new System.Windows.Forms.Label();
             this.sterilizedComboBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pedrigreeTextBox = new System.Windows.Forms.TextBox();
-            this.previousPedigreeLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.previousDateLabel = new System.Windows.Forms.Label();
@@ -56,9 +50,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.previousVaccine1Label = new System.Windows.Forms.Label();
-            this.previousVaccine2Label = new System.Windows.Forms.Label();
-            this.previousVaccine3Label = new System.Windows.Forms.Label();
             this.petPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.petPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -89,15 +80,6 @@
             this.saveChangesButton.UseVisualStyleBackColor = true;
             this.saveChangesButton.Click += new System.EventHandler(this.saveChangesButton_Click);
             // 
-            // previousPetName
-            // 
-            this.previousPetName.AutoSize = true;
-            this.previousPetName.Location = new System.Drawing.Point(77, 36);
-            this.previousPetName.Name = "previousPetName";
-            this.previousPetName.Size = new System.Drawing.Size(40, 13);
-            this.previousPetName.TabIndex = 4;
-            this.previousPetName.Text = "Pname";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -121,15 +103,6 @@
             this.petTypeComboBox.Size = new System.Drawing.Size(112, 21);
             this.petTypeComboBox.TabIndex = 14;
             // 
-            // previousPetTypeLabel
-            // 
-            this.previousPetTypeLabel.AutoSize = true;
-            this.previousPetTypeLabel.Location = new System.Drawing.Point(77, 92);
-            this.previousPetTypeLabel.Name = "previousPetTypeLabel";
-            this.previousPetTypeLabel.Size = new System.Drawing.Size(38, 13);
-            this.previousPetTypeLabel.TabIndex = 15;
-            this.previousPetTypeLabel.Text = "PType";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -146,15 +119,6 @@
             this.petColorTextBox.Size = new System.Drawing.Size(110, 20);
             this.petColorTextBox.TabIndex = 17;
             // 
-            // previousPetColorLabel
-            // 
-            this.previousPetColorLabel.AutoSize = true;
-            this.previousPetColorLabel.Location = new System.Drawing.Point(79, 150);
-            this.previousPetColorLabel.Name = "previousPetColorLabel";
-            this.previousPetColorLabel.Size = new System.Drawing.Size(38, 13);
-            this.previousPetColorLabel.TabIndex = 18;
-            this.previousPetColorLabel.Text = "PColor";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -163,15 +127,6 @@
             this.label4.Size = new System.Drawing.Size(45, 13);
             this.label4.TabIndex = 19;
             this.label4.Text = "Gender:";
-            // 
-            // previousPetGenderLabel
-            // 
-            this.previousPetGenderLabel.AutoSize = true;
-            this.previousPetGenderLabel.Location = new System.Drawing.Point(77, 198);
-            this.previousPetGenderLabel.Name = "previousPetGenderLabel";
-            this.previousPetGenderLabel.Size = new System.Drawing.Size(49, 13);
-            this.previousPetGenderLabel.TabIndex = 21;
-            this.previousPetGenderLabel.Text = "PGender";
             // 
             // genderComboBox
             // 
@@ -192,15 +147,6 @@
             this.label5.Size = new System.Drawing.Size(61, 13);
             this.label5.TabIndex = 23;
             this.label5.Text = "Is sterilized:";
-            // 
-            // previousIsSterilizedLabel
-            // 
-            this.previousIsSterilizedLabel.AutoSize = true;
-            this.previousIsSterilizedLabel.Location = new System.Drawing.Point(77, 250);
-            this.previousIsSterilizedLabel.Name = "previousIsSterilizedLabel";
-            this.previousIsSterilizedLabel.Size = new System.Drawing.Size(29, 13);
-            this.previousIsSterilizedLabel.TabIndex = 24;
-            this.previousIsSterilizedLabel.Text = "True";
             // 
             // sterilizedComboBox
             // 
@@ -228,15 +174,6 @@
             this.pedrigreeTextBox.Name = "pedrigreeTextBox";
             this.pedrigreeTextBox.Size = new System.Drawing.Size(112, 20);
             this.pedrigreeTextBox.TabIndex = 27;
-            // 
-            // previousPedigreeLabel
-            // 
-            this.previousPedigreeLabel.AutoSize = true;
-            this.previousPedigreeLabel.Location = new System.Drawing.Point(69, 308);
-            this.previousPedigreeLabel.Name = "previousPedigreeLabel";
-            this.previousPedigreeLabel.Size = new System.Drawing.Size(49, 13);
-            this.previousPedigreeLabel.TabIndex = 28;
-            this.previousPedigreeLabel.Text = "Pedigree";
             // 
             // label7
             // 
@@ -316,33 +253,6 @@
             this.label8.TabIndex = 32;
             this.label8.Text = "Vaccine 1:";
             // 
-            // previousVaccine1Label
-            // 
-            this.previousVaccine1Label.AutoSize = true;
-            this.previousVaccine1Label.Location = new System.Drawing.Point(287, 33);
-            this.previousVaccine1Label.Name = "previousVaccine1Label";
-            this.previousVaccine1Label.Size = new System.Drawing.Size(55, 13);
-            this.previousVaccine1Label.TabIndex = 38;
-            this.previousVaccine1Label.Text = "Vaccine 1";
-            // 
-            // previousVaccine2Label
-            // 
-            this.previousVaccine2Label.AutoSize = true;
-            this.previousVaccine2Label.Location = new System.Drawing.Point(287, 92);
-            this.previousVaccine2Label.Name = "previousVaccine2Label";
-            this.previousVaccine2Label.Size = new System.Drawing.Size(55, 13);
-            this.previousVaccine2Label.TabIndex = 39;
-            this.previousVaccine2Label.Text = "Vaccine 2";
-            // 
-            // previousVaccine3Label
-            // 
-            this.previousVaccine3Label.AutoSize = true;
-            this.previousVaccine3Label.Location = new System.Drawing.Point(287, 150);
-            this.previousVaccine3Label.Name = "previousVaccine3Label";
-            this.previousVaccine3Label.Size = new System.Drawing.Size(55, 13);
-            this.previousVaccine3Label.TabIndex = 40;
-            this.previousVaccine3Label.Text = "Vaccine 3";
-            // 
             // petPictureBox
             // 
             this.petPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -360,9 +270,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.petPictureBox);
-            this.Controls.Add(this.previousVaccine3Label);
-            this.Controls.Add(this.previousVaccine2Label);
-            this.Controls.Add(this.previousVaccine1Label);
             this.Controls.Add(this.vaccine3TextBox);
             this.Controls.Add(this.vaccine2TextBox);
             this.Controls.Add(this.vaccine1TextBox);
@@ -372,22 +279,16 @@
             this.Controls.Add(this.previousDateLabel);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.previousPedigreeLabel);
             this.Controls.Add(this.pedrigreeTextBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.sterilizedComboBox);
-            this.Controls.Add(this.previousIsSterilizedLabel);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.genderComboBox);
-            this.Controls.Add(this.previousPetGenderLabel);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.previousPetColorLabel);
             this.Controls.Add(this.petColorTextBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.previousPetTypeLabel);
             this.Controls.Add(this.petTypeComboBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.previousPetName);
             this.Controls.Add(this.saveChangesButton);
             this.Controls.Add(this.petNameTextBox);
             this.Controls.Add(this.label1);
@@ -404,22 +305,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox petNameTextBox;
         private System.Windows.Forms.Button saveChangesButton;
-        private System.Windows.Forms.Label previousPetName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox petTypeComboBox;
-        private System.Windows.Forms.Label previousPetTypeLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox petColorTextBox;
-        private System.Windows.Forms.Label previousPetColorLabel;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label previousPetGenderLabel;
         private System.Windows.Forms.ComboBox genderComboBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label previousIsSterilizedLabel;
         private System.Windows.Forms.ComboBox sterilizedComboBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox pedrigreeTextBox;
-        private System.Windows.Forms.Label previousPedigreeLabel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Label previousDateLabel;
@@ -429,9 +324,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label previousVaccine1Label;
-        private System.Windows.Forms.Label previousVaccine2Label;
-        private System.Windows.Forms.Label previousVaccine3Label;
         private System.Windows.Forms.PictureBox petPictureBox;
     }
 }
