@@ -5,9 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Proyecto_Poli_Refugio
-{
+{   //Christian Santiago Valentin #120535
+    //Rafael Charneco Gonzalez #
+
+    //Class of object AnimalInfo
     public class AnimalInfo
     {
+        //Attributes
         private string petName;
         private string petPhotoName;
         private string petType;
@@ -18,7 +22,7 @@ namespace Proyecto_Poli_Refugio
         private string dateEntry;
         private List<string> vaccine;
 
-
+        //Constructor
         public AnimalInfo()
         {
             PetName = string.Empty;
@@ -32,6 +36,7 @@ namespace Proyecto_Poli_Refugio
             Vaccine = new List<string>();
         }
 
+        //Data encapsulation
         public string PetName { get => petName; set => petName = value; }
         public string PetPhotoName { get => petPhotoName; set => petPhotoName = value; }
         public string PetType { get => petType; set => petType = value; }

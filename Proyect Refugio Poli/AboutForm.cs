@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 namespace Proyecto_Poli_Refugio
 {
+    /*
+     AboutForm
+     Contains the developers of this application
+     */
     public partial class AboutForm : Form
     {
         public AboutForm()

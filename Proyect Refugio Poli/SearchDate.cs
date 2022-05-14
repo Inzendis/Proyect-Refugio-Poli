@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 namespace Proyecto_Poli_Refugio
 {
+    /*
+     SearchDate form
+     Asks for a date to be used in ReportForm
+     */
     public partial class SearchDate : Form
     {
         private List<AnimalInfo> list = new List<AnimalInfo>();
@@ -19,6 +23,7 @@ namespace Proyecto_Poli_Refugio
             InitializeComponent();
         }
 
+        //Parameter constructor
         public SearchDate(List<AnimalInfo> aList)
         {
             InitializeComponent();
@@ -28,6 +33,7 @@ namespace Proyecto_Poli_Refugio
         }
 
 
+        // Search Date button click event
         private void searchDateButton_Click(object sender, EventArgs e)
         {
                 string date = searchDatePicker.Text;
@@ -36,6 +42,7 @@ namespace Proyecto_Poli_Refugio
                 this.Close();      
         }
 
+        //Enter key pressed which will cause a click on search date button
         private void enterButton_KeyDown(object sender, KeyEventArgs e)
         {
 

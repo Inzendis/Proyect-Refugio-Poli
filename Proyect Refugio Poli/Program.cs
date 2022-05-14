@@ -6,6 +6,8 @@ using System.Windows.Forms;
 
 namespace Proyecto_Poli_Refugio
 {
+    //Christian Santiago Valentin #120535
+    //Rafael Charneco Gonzalez #120490
     internal static class Program
     {
         /// <summary>
@@ -16,7 +18,7 @@ namespace Proyecto_Poli_Refugio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PolyRefugeFormMain());
+            Application.Run(new PolyRefugeFormMain()); // Runs app
         }
     }
 }

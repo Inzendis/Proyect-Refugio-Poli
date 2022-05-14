@@ -51,6 +51,7 @@
             this.vaccine2TextBox = new System.Windows.Forms.TextBox();
             this.vaccine3TextBox = new System.Windows.Forms.TextBox();
             this.closeButton = new System.Windows.Forms.Button();
+            this.ClickToSelectLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.petPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -268,11 +269,23 @@
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
+            // ClickToSelectLabel
+            // 
+            this.ClickToSelectLabel.AutoSize = true;
+            this.ClickToSelectLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClickToSelectLabel.Location = new System.Drawing.Point(322, 99);
+            this.ClickToSelectLabel.Name = "ClickToSelectLabel";
+            this.ClickToSelectLabel.Size = new System.Drawing.Size(180, 23);
+            this.ClickToSelectLabel.TabIndex = 23;
+            this.ClickToSelectLabel.Text = "Click to select photo";
+            this.ClickToSelectLabel.Click += new System.EventHandler(this.petPictureBox_Click);
+            // 
             // AddNewPet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 422);
+            this.Controls.Add(this.ClickToSelectLabel);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.vaccine3TextBox);
             this.Controls.Add(this.vaccine2TextBox);
@@ -329,5 +342,6 @@
         private System.Windows.Forms.TextBox vaccine2TextBox;
         private System.Windows.Forms.TextBox vaccine3TextBox;
         private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.Label ClickToSelectLabel;
     }
 }

@@ -10,6 +10,12 @@ using System.Windows.Forms;
 
 namespace Proyecto_Poli_Refugio
 {
+    /*
+     ModifyForm 
+     After searching through SearchForm, ModifyForm will get the list and index at which the pet was found.
+     When the parameter constructor is called, all the textboxes will be filled with the pet's current information.
+     If any of the information is changed, on save button click the changes will be applied.
+     */
     public partial class ModifyForm : Form
     {
         private List<AnimalInfo> Modlist = new List<AnimalInfo>();
@@ -24,6 +30,8 @@ namespace Proyecto_Poli_Refugio
             InitializeComponent();
             Modlist = list;
             animalIndex = index;
+
+            //Filling the text boxes with current pet's information
             petNameTextBox.Text = Modlist[animalIndex].PetName;
 
             petPictureBox.Image = new Bitmap(Modlist[animalIndex].PetPhotoName);
@@ -46,8 +54,11 @@ namespace Proyecto_Poli_Refugio
             vaccine2TextBox.Text = Modlist[animalIndex].Vaccine[1];
             vaccine3TextBox.Text = Modlist[animalIndex].Vaccine[2];
         }
+
+        //Save button on click event
         private void saveChangesButton_Click(object sender, EventArgs e)
         {
+            //If any of the texboxes or picture is empty, the save will not occur.
             if (petNameTextBox.Text != String.Empty && petPictureBox.Text != String.Empty && petColorTextBox.Text != string.Empty && genderComboBox.Text != string.Empty
                 && sterilizedComboBox.Text != string.Empty && pedrigreeTextBox.Text != string.Empty && vaccine1TextBox.Text != string.Empty && vaccine2TextBox.Text != string.Empty
                 && vaccine3TextBox.Text != string.Empty)
@@ -74,9 +85,13 @@ namespace Proyecto_Poli_Refugio
                 Modlist[animalIndex].PetPhotoName = petPictureBox.Text;
                 this.Close();
             }
+            else
+            {
+                MessageBox.Show("Missing information.", "Error");
+            }
         }
 
-
+        //PetType check changed event
         private void PetTypeCheck(object sender, EventArgs e)
         {
             bool found = false;
@@ -86,13 +101,13 @@ namespace Proyecto_Poli_Refugio
                 {
                     foreach (string petType in petTypeComboBox.Items)
                     {
-                        if (petType == (string)petTypeComboBox.SelectedItem)
+                        if (petType == (string)petTypeComboBox.SelectedItem)// If the selected item matches the items in combo box
                         {
                             found = true;
                             break;
                         }
                     }
-                    if (found == false)
+                    if (found == false)// The combo box contains a string not contained in the items of the combo box
                     {
                         throw new FormatException();
                     }
@@ -115,13 +130,13 @@ namespace Proyecto_Poli_Refugio
                 {
                     foreach (string petGender in genderComboBox.Items)
                     {
-                        if (petGender == (string)genderComboBox.SelectedItem)
+                        if (petGender == (string)genderComboBox.SelectedItem)// If the selected item matches the items in combo box
                         {
                             found = true;
                             break;
                         }
                     }
-                    if (found == false)
+                    if (found == false)// The combo box contains a string not contained in the items of the combo box
                     {
                         throw new FormatException();
                     }
@@ -146,13 +161,13 @@ namespace Proyecto_Poli_Refugio
                 {
                     foreach (string answer in sterilizedComboBox.Items)
                     {
-                        if (answer == (string)sterilizedComboBox.SelectedItem)
+                        if (answer == (string)sterilizedComboBox.SelectedItem)// If the selected item matches the items in combo box
                         {
                             found = true;
                             break;
                         }
                     }
-                    if (found == false)
+                    if (found == false)// The combo box contains a string not contained in the items of the combo box
                     {
                         throw new FormatException();
                     }
@@ -166,7 +181,7 @@ namespace Proyecto_Poli_Refugio
                 sterilizedComboBox.SelectAll();
             }
         }
-
+        //Adds picture on click and file selected
         private void petPictureBox_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();

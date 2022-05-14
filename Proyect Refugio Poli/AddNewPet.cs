@@ -10,6 +10,11 @@ using System.Windows.Forms;
 
 namespace Proyecto_Poli_Refugio
 {
+    /*
+     AddNewPet form 
+     Receives AnimalInfo list through reference in parameter constructor
+     Asks for all the information needed of AnimalInfo.
+     */
     public partial class AddNewPet : Form
     {
         private List<AnimalInfo> list = new List<AnimalInfo>();
@@ -26,6 +31,7 @@ namespace Proyecto_Poli_Refugio
             InitializeComponent();
             list = animal;
         }
+        //Checks that only combo box options are selected in PetType
         private void PetTypeCheck(object sender, EventArgs e)
         {
             bool found = false; 
@@ -33,15 +39,15 @@ namespace Proyecto_Poli_Refugio
                 {
                     if (petTypeComboBox.Text != string.Empty)
                     {
-                        foreach (string petType in petTypeComboBox.Items)
+                        foreach (string petType in petTypeComboBox.Items) 
                         {
-                            if (petType == (string)petTypeComboBox.SelectedItem)
+                            if (petType == (string)petTypeComboBox.SelectedItem) // If the selected item matches the items in combo box
                             {
                                 found = true;
                                 break;
                             }
                         }
-                        if (found == false)
+                        if (found == false) // The combo box contains a string not contained in the items of the combo box
                         {
                             throw new FormatException();
                         }
@@ -54,6 +60,8 @@ namespace Proyecto_Poli_Refugio
                     petTypeComboBox.SelectAll();
                 }
         }
+
+        //Checks that only combo box options are selected in Gender
         private void GenderCheck(object sender, EventArgs e)
         {
             bool found = false;
@@ -63,13 +71,13 @@ namespace Proyecto_Poli_Refugio
                 {
                     foreach(string petGender in genderComboBox.Items)
                     {
-                        if (petGender == (string)genderComboBox.SelectedItem)
+                        if (petGender == (string)genderComboBox.SelectedItem) // If the selected item matches the items in combo box
                         {
                             found = true;
                             break;
                         }
                     }
-                    if (found == false)
+                    if (found == false)// The combo box contains a string not contained in the items of the combo box
                     {
                         throw new FormatException();
                     }             
@@ -84,6 +92,7 @@ namespace Proyecto_Poli_Refugio
             }
         }
 
+        //Checks that only combo box options are selected in IsSterilized
         private void IsSterilized(object sender, EventArgs e)
         {
             bool found = false;
@@ -93,13 +102,13 @@ namespace Proyecto_Poli_Refugio
                 {
                     foreach (string answer in sterilizedComboBox.Items)
                     {
-                        if (answer == (string)sterilizedComboBox.SelectedItem)
+                        if (answer == (string)sterilizedComboBox.SelectedItem)// If the selected item matches the items in combo box
                         {
                             found = true;
                             break;
                         }
                     }
-                    if (found == false)
+                    if (found == false)// The combo box contains a string not contained in the items of the combo box
                     {
                         throw new FormatException();
                     }
@@ -114,9 +123,10 @@ namespace Proyecto_Poli_Refugio
             }
         }
 
-
+        // Save button click event
         private void saveButton_Click(object sender, EventArgs e)
         {
+            //If any of the fields are not filled, do not add
             if (petNameTextBox.Text != String.Empty && petPictureBox.Text != String.Empty && petColorTextBox.Text != string.Empty && genderComboBox.Text != string.Empty
                 && sterilizedComboBox.Text != string.Empty && pedrigreeTextBox.Text != string.Empty && vaccine1TextBox.Text != string.Empty && vaccine2TextBox.Text != string.Empty
                 && vaccine3TextBox.Text != string.Empty)
@@ -130,19 +140,20 @@ namespace Proyecto_Poli_Refugio
                 else
                     animalInfo.IsSterilized = false;
                 animalInfo.Pedigree = pedrigreeTextBox.Text;
-                animalInfo.DateEntry = dateTimePicker.Text; // Please fix
+                animalInfo.DateEntry = dateTimePicker.Text; 
                 animalInfo.Vaccine.Add(vaccine1TextBox.Text);
                 animalInfo.Vaccine.Add(vaccine2TextBox.Text);
                 animalInfo.Vaccine.Add(vaccine3TextBox.Text);
                 list.Add(animalInfo);
                 this.Close();
             }
-            else
+            else // Fields are not filled completely
             {
                 MessageBox.Show("Missing information.", "Error");
             }
         }
 
+        //Adds picture on click and file selected
         private void petPictureBox_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
@@ -156,9 +167,14 @@ namespace Proyecto_Poli_Refugio
 
                 animalInfo.PetPhotoName = open.FileName;
             }
+            if (animalInfo.PetPhotoName != string.Empty)
+            {
+                ClickToSelectLabel.Visible = false;
+            }
             
         }
 
+        //Close button click event
         private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();

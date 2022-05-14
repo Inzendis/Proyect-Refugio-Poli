@@ -9,7 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Proyecto_Poli_Refugio
-{//Christian Santiago Valentin #120535
+{   //Christian Santiago Valentin #120535
+    //Rafael Charneco Gonzalez #120490
+
+    /*
+     Main form, PolyRefugeFormMain
+     Instances a list of pets called animalList of object AnimalInfo
+     Contains the events of menu clicks
+     */
     public partial class PolyRefugeFormMain : Form
     {
 
@@ -20,6 +27,7 @@ namespace Proyecto_Poli_Refugio
         private AboutForm aboutform;
         private HelpContents helpcontents;
         
+        // Method to update the amount of pets and pets' names in main form.
         private void CurrentAnimals()
         {
             if (animalList.Count > 0)
@@ -36,62 +44,70 @@ namespace Proyecto_Poli_Refugio
                 amountOfPetsLabel.Text = $"0";
             }
         }
+        // Constructor
         public PolyRefugeFormMain()
         {
             InitializeComponent();
             addpet = null;
             searchform = null;
+            searchdate = null;
+            aboutform = null;
+            helpcontents = null;
             
         }
 
+        //Event that occurs when entering or return to main form.
         private void EnterApp(object sender, EventArgs e)
         {
-            animalList.Sort((x, y) => x.PetName.CompareTo(y.PetName));
+            animalList.Sort((x, y) => x.PetName.CompareTo(y.PetName)); // Sorts the list with pets' names in alphabetical order
             CurrentAnimals();
-           
         }
 
-
+        //Add a Pet form on menu click
         private void addNewPetToolStripMenuItem_Click(object sender, EventArgs e)
         {
             addpet = new AddNewPet(animalList);
-            addpet.Show();
-            
-            
+            addpet.Show();   
         }
 
+        //Display a pet form on menu click
         private void displayPetInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Searchform is used first to get pet
             searchform = new SearchForm(animalList,3);
             searchform.Show();
-           
-
         }
 
+        //Modify a pet form on menu click
         private void modifyAPetToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Searchform is used first to get pet
             searchform = new SearchForm(animalList, 2);
             searchform.Show();
         }
 
+        //Report a pet form on menu click
         private void reportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            //Searchdate form is used first to get pets on date
             searchdate = new SearchDate(animalList);
             searchdate.Show();  
         }
 
+        //Exit on menu click
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        //Help Contents on menu click
         private void helpContentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             helpcontents = new HelpContents();
             helpcontents.Show();
         }
 
+        //About on menu click
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             aboutform = new AboutForm();

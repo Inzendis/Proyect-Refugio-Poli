@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 namespace Proyecto_Poli_Refugio
 {
+    /*
+     DisplayPetInfo form
+     Shows the data of an AnimalInfo object from a List of AnimalObject
+     */
     public partial class DisplayPetInfo : Form
     {
         private List<AnimalInfo> list = new List<AnimalInfo>();
@@ -19,12 +23,15 @@ namespace Proyecto_Poli_Refugio
             InitializeComponent();
         }
 
-        public DisplayPetInfo(List<AnimalInfo> animal, int aIndex)
+        //Constructor with parameters List of AnimalInfo object
+        public DisplayPetInfo(List<AnimalInfo> pets, int aIndex)
         {
             InitializeComponent();
-            list = animal;
+            list = pets;
             index = aIndex;
         }
+
+        //EnterApp event, when display opens it will contain all the information within a TextBox and display the pet's photo
         private void EnterApp(object sender, EventArgs e)
         {
             infoTextBox.Text = $"Pet Name: {list[index].PetName}\r\nPet Type: {list[index].PetType}\r\n" +
@@ -37,6 +44,8 @@ namespace Proyecto_Poli_Refugio
             closeButton.Focus();
             closeButton.Select();
         }
+
+        //Close button on click event
         private void closeButton_Click(object sender, EventArgs e)
         {
             this.Close();

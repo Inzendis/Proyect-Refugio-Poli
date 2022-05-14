@@ -18,6 +18,7 @@ namespace Proyecto_Poli_Refugio
         private List<AnimalInfo> list = new List<AnimalInfo>();
         int senderInput;
 
+        // Returns the selected pet's index in combo box
         public int selected()
         {
             enterButton.Focus();
@@ -29,6 +30,7 @@ namespace Proyecto_Poli_Refugio
             InitializeComponent();
         }
 
+        //Parameter constructor that receives a list of AnimalInfo object and the menu option clicked.
         public SearchForm(List<AnimalInfo> animal, int aSenderInput)
         {
             InitializeComponent();
@@ -36,24 +38,25 @@ namespace Proyecto_Poli_Refugio
             senderInput = aSenderInput;
             for (int i = 0; i < list.Count; i++)
             {
-                animalComboBox.Items.Add(list[i].PetName + ' ' + list[i].DateEntry + ' '+ list[i].Pedigree);
+                animalComboBox.Items.Add(list[i].PetName + ' ' + list[i].DateEntry + ' '+ list[i].Pedigree); // Combo box within search to avoid incorrect searches.
             }
             
         }
 
 
+        // Enter button click event
         private void enterButton_Click(object sender, EventArgs e)
         {
             if (selected() > -1)
             {
                 switch (senderInput)
                 {
-                    case 2:
+                    case 2: // aSenderInput is 2, meaning ModifyForm was selected.
                         modifyform = new ModifyForm(list, selected());
                         modifyform.Show();
                         this.Close();
                         break;
-                    case 3:
+                    case 3: // aSenderInput is 3, meaning DisplayPetInfo was selected.
                         displaypet = new DisplayPetInfo(list, selected());
                         displaypet.Show();
                         this.Close();
@@ -63,6 +66,7 @@ namespace Proyecto_Poli_Refugio
             }
         }
 
+        //Enter key pressed event that causes click event on Enter button
         private void enterButton_KeyDown(object sender, KeyEventArgs e)
         {
 

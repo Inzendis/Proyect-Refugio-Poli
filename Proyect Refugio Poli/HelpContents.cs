@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 namespace Proyecto_Poli_Refugio
 {
+    /*
+     HelpContents form
+     Contains an explanation of each functionality of the app.
+     */
     public partial class HelpContents : Form
     {
         public HelpContents()

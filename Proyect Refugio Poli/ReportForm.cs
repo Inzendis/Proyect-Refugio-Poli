@@ -10,6 +10,12 @@ using System.Windows.Forms;
 
 namespace Proyecto_Poli_Refugio
 {
+    /*
+     ReportForm 
+     Displays all the pets logged within the given date.
+     Doesn't show picture directory or picture.
+     Uses DataGridView to display data populated with a new list of AnimalInfo containing only pets with same entry date.
+     */
     public partial class ReportForm : Form
     {
         private List<AnimalInfo> list = new List<AnimalInfo>();
@@ -19,6 +25,7 @@ namespace Proyecto_Poli_Refugio
         {
             InitializeComponent();
         }
+        //Parameter Constructor
         public ReportForm(List<AnimalInfo> alist, string aDate)
         {
             InitializeComponent();
@@ -31,7 +38,7 @@ namespace Proyecto_Poli_Refugio
             this.Close();
         }
 
-        //DataGridView
+        //DataGridView Update event when form is activated/entered
         private void DataGridView_Update(object sender, EventArgs e)
         {
             List<AnimalInfo> listToShow = new List<AnimalInfo>();
@@ -42,13 +49,13 @@ namespace Proyecto_Poli_Refugio
 
                 if (list[i].DateEntry == dateToSearch)
                 {
-                    listToShow.Add(list[i]);
+                    listToShow.Add(list[i]);          // New list adding only the animals with same entry date chosen.
                    
                 }
             }
 
-            animalDataGridView.DataSource = listToShow;
-            for (int i = 0; i < listToShow.Count; i++)
+            animalDataGridView.DataSource = listToShow; // Populates DataGridView data
+            for (int i = 0; i < listToShow.Count; i++) // Fills the columns of Vaccine 1 to 3 with a list inside list of AnimalInfo
             {
                 animalDataGridView.Rows[i].Cells["Vaccine1"].Value = listToShow[i].Vaccine[0];
                 animalDataGridView.Rows[i].Cells["Vaccine2"].Value = listToShow[i].Vaccine[1];
