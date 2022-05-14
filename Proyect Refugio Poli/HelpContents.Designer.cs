@@ -44,11 +44,13 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(534, 360);
+            this.closeButton.Location = new System.Drawing.Point(534, 408);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(76, 29);
             this.closeButton.TabIndex = 0;
@@ -154,7 +156,7 @@
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(415, 52);
+            this.textBox5.Size = new System.Drawing.Size(415, 35);
             this.textBox5.TabIndex = 10;
             this.textBox5.Text = "When choosing the Report function, a date will be asked to show all the pets logg" +
     "ed in the given date.\r\n\r\n";
@@ -162,7 +164,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 309);
+            this.label6.Location = new System.Drawing.Point(12, 340);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(27, 13);
             this.label6.TabIndex = 11;
@@ -171,18 +173,18 @@
             // textBox6
             // 
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Location = new System.Drawing.Point(100, 308);
+            this.textBox6.Location = new System.Drawing.Point(100, 339);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(415, 52);
+            this.textBox6.Size = new System.Drawing.Size(415, 33);
             this.textBox6.TabIndex = 12;
             this.textBox6.Text = "Closes Poly Refugio\r\n";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 347);
+            this.label7.Location = new System.Drawing.Point(12, 378);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 13);
             this.label7.TabIndex = 13;
@@ -191,19 +193,42 @@
             // textBox7
             // 
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Location = new System.Drawing.Point(100, 347);
+            this.textBox7.Location = new System.Drawing.Point(100, 378);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(415, 52);
+            this.textBox7.Size = new System.Drawing.Size(415, 30);
             this.textBox7.TabIndex = 14;
             this.textBox7.Text = "Shows the developers of Poly Refugio.";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 299);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(42, 13);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Report:";
+            // 
+            // textBox8
+            // 
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox8.Location = new System.Drawing.Point(100, 299);
+            this.textBox8.Multiline = true;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(415, 35);
+            this.textBox8.TabIndex = 16;
+            this.textBox8.Text = "Shows all the information asked in Add New Pet except the pet picture, pet’s pict" +
+    "ure directory, and date in a table.";
             // 
             // HelpContents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 401);
+            this.ClientSize = new System.Drawing.Size(622, 449);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox6);
@@ -243,5 +268,7 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox8;
     }
 }
