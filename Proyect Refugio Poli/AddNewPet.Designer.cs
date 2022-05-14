@@ -185,6 +185,7 @@
             this.petTypeComboBox.Name = "petTypeComboBox";
             this.petTypeComboBox.Size = new System.Drawing.Size(112, 21);
             this.petTypeComboBox.TabIndex = 13;
+            this.petTypeComboBox.Leave += new System.EventHandler(this.PetTypeCheck);
             // 
             // petColorTextBox
             // 
@@ -203,7 +204,6 @@
             this.genderComboBox.Name = "genderComboBox";
             this.genderComboBox.Size = new System.Drawing.Size(112, 21);
             this.genderComboBox.TabIndex = 15;
-            this.genderComboBox.TextUpdate += new System.EventHandler(this.GenderCheck);
             this.genderComboBox.Leave += new System.EventHandler(this.GenderCheck);
             // 
             // sterilizedComboBox
@@ -216,8 +216,7 @@
             this.sterilizedComboBox.Name = "sterilizedComboBox";
             this.sterilizedComboBox.Size = new System.Drawing.Size(112, 21);
             this.sterilizedComboBox.TabIndex = 16;
-            this.sterilizedComboBox.TextUpdate += new System.EventHandler(this.IsSterilized);
-            this.sterilizedComboBox.TextChanged += new System.EventHandler(this.IsSterilized);
+            this.sterilizedComboBox.Leave += new System.EventHandler(this.IsSterilized);
             // 
             // pedrigreeTextBox
             // 

@@ -23,11 +23,18 @@ namespace Proyecto_Poli_Refugio
         private void CurrentAnimals()
         {
             if (animalList.Count > 0)
+            {
                 currentAnimalsTextBox.Text = string.Empty;
+                amountOfPetsLabel.Text = $"{animalList.Count}";
                 foreach (AnimalInfo info in animalList)
                 {
                     currentAnimalsTextBox.Text += $"{info.PetName}\t{info.DateEntry}\r\n";
                 }
+            }
+            else
+            {
+                amountOfPetsLabel.Text = $"0";
+            }
         }
         public PolyRefugeFormMain()
         {
@@ -91,6 +98,9 @@ namespace Proyecto_Poli_Refugio
             aboutform.Show();
         }
 
-       
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

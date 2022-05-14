@@ -24,83 +24,144 @@ namespace Proyecto_Poli_Refugio
             InitializeComponent();
             Modlist = list;
             animalIndex = index;
-            previousPetName.Text = Modlist[animalIndex].PetName;
+            petNameTextBox.Text = Modlist[animalIndex].PetName;
+
+            petPictureBox.Image = new Bitmap(Modlist[animalIndex].PetPhotoName);
             petPictureBox.Text = Modlist[animalIndex].PetPhotoName;
-            previousPetColorLabel.Text = Modlist[animalIndex].PetColor;
-            previousPetTypeLabel.Text = Modlist[animalIndex].PetType;
-            previousPetGenderLabel.Text = Modlist[animalIndex].Gender;
+
+            petColorTextBox.Text = Modlist[animalIndex].PetColor;
+            petTypeComboBox.Text = Modlist[animalIndex].PetType;
+            genderComboBox.Text = Modlist[animalIndex].Gender;
             if(Modlist[animalIndex].IsSterilized)
             {
-                previousIsSterilizedLabel.Text = "Yes";
+                sterilizedComboBox.Text = "Yes";
             }
             else
             {
-                previousIsSterilizedLabel.Text = "No";
+                sterilizedComboBox.Text = "No";
             }
-            previousPedigreeLabel.Text = Modlist[animalIndex].Pedigree;
-            previousDateLabel.Text = Modlist[animalIndex].DateEntry;
-            previousVaccine1Label.Text = Modlist[animalIndex].Vaccine[0];
-            previousVaccine2Label.Text = Modlist[animalIndex].Vaccine[1];
-            previousVaccine3Label.Text = Modlist[animalIndex].Vaccine[2];
+            pedrigreeTextBox.Text = Modlist[animalIndex].Pedigree;
+            dateTimePicker.Text = Modlist[animalIndex].DateEntry;
+            vaccine1TextBox.Text = Modlist[animalIndex].Vaccine[0];
+            vaccine2TextBox.Text = Modlist[animalIndex].Vaccine[1];
+            vaccine3TextBox.Text = Modlist[animalIndex].Vaccine[2];
         }
         private void saveChangesButton_Click(object sender, EventArgs e)
         {
-            if (petNameTextBox.Text != string.Empty)
-                Modlist[animalIndex].PetName = petNameTextBox.Text;
-
-            if (petTypeComboBox.Text != string.Empty)
-                Modlist[animalIndex].PetType = petTypeComboBox.Text;
-
-            if (petColorTextBox.Text != string.Empty)
-                Modlist[animalIndex].PetColor = petColorTextBox.Text;
-
-            if (genderComboBox.Text != string.Empty)
-                Modlist[animalIndex].Gender = genderComboBox.Text;
-
-            if (sterilizedComboBox.Text != string.Empty)
+            Modlist[animalIndex].PetName = petNameTextBox.Text;
+            Modlist[animalIndex].PetType = petTypeComboBox.Text;
+            Modlist[animalIndex].PetColor = petColorTextBox.Text;
+            Modlist[animalIndex].Gender = genderComboBox.Text;  
+            
+            if (sterilizedComboBox.Text == "Yes")
             {
-                if (sterilizedComboBox.Text == "Yes")
-                {
-                    Modlist[animalIndex].IsSterilized = true;
-                }
-                else if (sterilizedComboBox.Text == "No")
-                {
-                    Modlist[animalIndex].IsSterilized = false;
-
-                }
+                Modlist[animalIndex].IsSterilized = true;
             }
-
-            if(pedrigreeTextBox.Text != string.Empty)
+            else if (sterilizedComboBox.Text == "No")
             {
-                Modlist[animalIndex].Pedigree = pedrigreeTextBox.Text;
+                Modlist[animalIndex].IsSterilized = false;
             }
-
-            if(dateTimePicker.Text != "5/7/2022")
-            {
-                Modlist[animalIndex].DateEntry = dateTimePicker.Text;
-            }
-
-            if (vaccine1TextBox.Text != string.Empty)
-            {
-                Modlist[animalIndex].Vaccine[0] = vaccine1TextBox.Text;
-            }
-
-            if (vaccine2TextBox.Text != string.Empty)
-            {
-                Modlist[animalIndex].Vaccine[1] = vaccine1TextBox.Text;
-            }
-
-            if (vaccine3TextBox.Text != string.Empty)
-            {
-                Modlist[animalIndex].Vaccine[2] = vaccine1TextBox.Text;
-            }
-
-            if (petPictureBox.Text != Modlist[animalIndex].PetPhotoName)
-            {
-                Modlist[animalIndex].PetPhotoName = petPictureBox.Text;
-            }
+            Modlist[animalIndex].Pedigree = pedrigreeTextBox.Text;
+            Modlist[animalIndex].DateEntry = dateTimePicker.Text;
+   
+            Modlist[animalIndex].Vaccine[0] = vaccine1TextBox.Text;
+            Modlist[animalIndex].Vaccine[1] = vaccine2TextBox.Text;
+            Modlist[animalIndex].Vaccine[2] = vaccine3TextBox.Text;
+            Modlist[animalIndex].PetPhotoName = petPictureBox.Text;
+            
 
             this.Close();
+        }
+
+
+        private void PetTypeCheck(object sender, EventArgs e)
+        {
+            bool found = false;
+            try
+            {
+                if (petTypeComboBox.Text != string.Empty)
+                {
+                    foreach (string petType in petTypeComboBox.Items)
+                    {
+                        if (petType == (string)petTypeComboBox.SelectedItem)
+                        {
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (found == false)
+                    {
+                        throw new FormatException();
+                    }
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Invalid pet type answer.", "Error");
+                petTypeComboBox.Focus();
+                petTypeComboBox.SelectAll();
+            }
+        }
+
+        private void GenderCheck(object sender, EventArgs e)
+        {
+            bool found = false;
+            try
+            {
+                if (genderComboBox.Text != string.Empty)
+                {
+                    foreach (string petGender in genderComboBox.Items)
+                    {
+                        if (petGender == (string)genderComboBox.SelectedItem)
+                        {
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (found == false)
+                    {
+                        throw new FormatException();
+                    }
+                }
+
+
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Invalid gender answer.", "Error");
+                genderComboBox.Focus();
+                genderComboBox.SelectAll();
+            }
+        }
+
+        private void IsSterilized(object sender, EventArgs e)
+        {
+            bool found = false;
+            try
+            {
+                if (sterilizedComboBox.Text != string.Empty)
+                {
+                    foreach (string answer in sterilizedComboBox.Items)
+                    {
+                        if (answer == (string)sterilizedComboBox.SelectedItem)
+                        {
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (found == false)
+                    {
+                        throw new FormatException();
+                    }
+                }
+
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Invalid sterilized answer.", "Error");
+                sterilizedComboBox.Focus();
+                sterilizedComboBox.SelectAll();
+            }
         }
 
         private void petPictureBox_Click(object sender, EventArgs e)
