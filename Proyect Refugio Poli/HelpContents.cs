@@ -11,8 +11,11 @@ using System.Windows.Forms;
 namespace Proyecto_Poli_Refugio
 {
     /*
-     HelpContents form
-     Contains an explanation of each functionality of the app.
+      Project: Proyecto Refugio Poli
+      Class form: HelpContents
+      Description: Contains an explanation of each functionality of the app.
+      Developed by: Christian Santiago Valentin #120535
+                    Rafael Charneco Gonzalez #120490
      */
     public partial class HelpContents : Form
     {

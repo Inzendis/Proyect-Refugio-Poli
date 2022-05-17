@@ -5,10 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Proyecto_Poli_Refugio
-{   //Christian Santiago Valentin #120535
-    //Rafael Charneco Gonzalez #
-
-    //Class of object AnimalInfo
+{ 
+    /*
+      Project: Proyecto Refugio Poli
+      Class: AnimalInfo
+      Description: Contains all the attributes a pet must have.
+      Developed by: Christian Santiago Valentin #120535
+                    Rafael Charneco Gonzalez #120490
+     */
     public class AnimalInfo
     {
         //Attributes

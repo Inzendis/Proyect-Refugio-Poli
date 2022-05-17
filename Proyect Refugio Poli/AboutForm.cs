@@ -11,8 +11,11 @@ using System.Windows.Forms;
 namespace Proyecto_Poli_Refugio
 {
     /*
-     AboutForm
-     Contains the developers of this application
+      Project: Proyecto Refugio Poli
+      Class form: AboutForm
+      Description: Contains the developers of this application
+      Developed by: Christian Santiago Valentin #120535
+                    Rafael Charneco Gonzalez #120490
      */
     public partial class AboutForm : Form
     {

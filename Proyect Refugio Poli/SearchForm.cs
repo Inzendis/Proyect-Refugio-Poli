@@ -9,7 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Proyecto_Poli_Refugio
-{
+{/*
+   Project: Proyecto Refugio Poli
+   Class form: SearchForm
+   Description: Search form that asks the user to pick a pet from a combo box populated by the list of object type AnimalInfo.
+   Receives the list as a parameter through reference in the parameter constructor.
+   Instanciates DisplayPetInfo and ModifyForm because SearchForm has to appear first to perform the search.
+   Developed by: Christian Santiago Valentin #120535
+                 Rafael Charneco Gonzalez #120490
+  */
     public partial class SearchForm : Form
     {
       

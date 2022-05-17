@@ -37,7 +37,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 86);
+            this.label1.Location = new System.Drawing.Point(12, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             // enterButton
             // 
-            this.enterButton.Location = new System.Drawing.Point(331, 75);
+            this.enterButton.Location = new System.Drawing.Point(324, 75);
             this.enterButton.Name = "enterButton";
             this.enterButton.Size = new System.Drawing.Size(54, 35);
             this.enterButton.TabIndex = 2;
@@ -56,9 +56,9 @@
             // animalComboBox
             // 
             this.animalComboBox.FormattingEnabled = true;
-            this.animalComboBox.Location = new System.Drawing.Point(147, 83);
+            this.animalComboBox.Location = new System.Drawing.Point(103, 83);
             this.animalComboBox.Name = "animalComboBox";
-            this.animalComboBox.Size = new System.Drawing.Size(166, 21);
+            this.animalComboBox.Size = new System.Drawing.Size(202, 21);
             this.animalComboBox.TabIndex = 3;
             // 
             // closeButton

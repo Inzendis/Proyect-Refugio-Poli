@@ -11,10 +11,13 @@ using System.Windows.Forms;
 namespace Proyecto_Poli_Refugio
 {
     /*
-     ModifyForm 
-     After searching through SearchForm, ModifyForm will get the list and index at which the pet was found.
-     When the parameter constructor is called, all the textboxes will be filled with the pet's current information.
-     If any of the information is changed, on save button click the changes will be applied.
+      Project: Proyecto Refugio Poli
+      Class form: ModifyForm
+      Description: After searching through SearchForm, ModifyForm will get the list and index at which the pet was found.
+      When the parameter constructor is called, all the textboxes will be filled with the pet's current information.
+      If any of the information is changed, on save button click the changes will be applied.
+      Developed by: Christian Santiago Valentin #120535
+                    Rafael Charneco Gonzalez #120490 
      */
     public partial class ModifyForm : Form
     {

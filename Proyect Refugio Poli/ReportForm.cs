@@ -11,10 +11,14 @@ using System.Windows.Forms;
 namespace Proyecto_Poli_Refugio
 {
     /*
-     ReportForm 
-     Displays all the pets logged within the given date.
-     Doesn't show picture directory or picture.
-     Uses DataGridView to display data populated with a new list of AnimalInfo containing only pets with same entry date.
+      Project: Proyecto Refugio Poli
+      Class form: ReportForm
+      Description: Instanciates a list of AnimalInfo that receives the contents of the original list of AnimalInfo in PolyRefugeFormMain.
+      Displays all the pets logged within the given date.
+      Doesn't show picture directory or picture.
+      Uses DataGridView to display data populated with a new list of AnimalInfo containing only pets with same entry date.
+      Developed by: Christian Santiago Valentin #120535
+                    Rafael Charneco Gonzalez #120490
      */
     public partial class ReportForm : Form
     {

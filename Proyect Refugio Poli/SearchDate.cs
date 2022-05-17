@@ -11,8 +11,12 @@ using System.Windows.Forms;
 namespace Proyecto_Poli_Refugio
 {
     /*
-     SearchDate form
-     Asks for a date to be used in ReportForm
+      Project: Proyecto Refugio Poli
+      Class form: SearchDate
+      Description: Asks for a date to be used in ReportForm.
+      Creates a new list of AnimalInfo with the pets that match the date entered by the user.
+      Developed by: Christian Santiago Valentin #120535
+                    Rafael Charneco Gonzalez #120490
      */
     public partial class SearchDate : Form
     {

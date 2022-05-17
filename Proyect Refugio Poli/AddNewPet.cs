@@ -11,9 +11,12 @@ using System.Windows.Forms;
 namespace Proyecto_Poli_Refugio
 {
     /*
-     AddNewPet form 
-     Receives AnimalInfo list through reference in parameter constructor
-     Asks for all the information needed of AnimalInfo.
+      Project: Proyecto Refugio Poli
+      Class form: AddNewPet
+      Description: Receives AnimalInfo list through reference in parameter constructor
+      Asks for all the information needed of AnimalInfo.
+      Developed by: Christian Santiago Valentin #120535
+                    Rafael Charneco Gonzalez #120490
      */
     public partial class AddNewPet : Form
     {

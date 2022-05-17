@@ -9,13 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Proyecto_Poli_Refugio
-{   //Christian Santiago Valentin #120535
-    //Rafael Charneco Gonzalez #120490
-
+{
     /*
-     Main form, PolyRefugeFormMain
-     Instances a list of pets called animalList of object AnimalInfo
-     Contains the events of menu clicks
+      Project: Proyecto Refugio Poli
+      Class form: PolyRefugeFormMain
+      Description: Instanciates a list of pets called animalList of object AnimalInfo. 
+      Contains the events of menu clicks.
+      animalList is passed as a referenced parameter in the paramater constructors of:
+      AddNewPet, SearchForm, SearchDate, AboutForm, and HelpContents
+      ModifyForm, DisplayPetInfo, and ReportForm 
+      Developed by: Christian Santiago Valentin #120535
+                    Rafael Charneco Gonzalez #120490
      */
     public partial class PolyRefugeFormMain : Form
     {
@@ -30,6 +34,8 @@ namespace Proyecto_Poli_Refugio
         // Method to update the amount of pets and pets' names in main form.
         private void CurrentAnimals()
         {
+            amountOfPetsLabel.Focus();
+            amountOfPetsLabel.Select();
             if (animalList.Count > 0)
             {
                 currentAnimalsTextBox.Text = string.Empty;

@@ -8,6 +8,7 @@ namespace Proyecto_Poli_Refugio
 {
     //Christian Santiago Valentin #120535
     //Rafael Charneco Gonzalez #120490
+    //Application Run cs file.
     internal static class Program
     {
         /// <summary>

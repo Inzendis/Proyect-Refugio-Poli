@@ -11,8 +11,11 @@ using System.Windows.Forms;
 namespace Proyecto_Poli_Refugio
 {
     /*
-     DisplayPetInfo form
-     Shows the data of an AnimalInfo object from a List of AnimalObject
+      Project: Proyecto Refugio Poli
+      Class form: DisplayPetInfo
+      Description: Shows the data of an AnimalInfo object from a List of AnimalObject passed through reference parameter in the parameter constructor.
+      Developed by: Christian Santiago Valentin #120535
+                    Rafael Charneco Gonzalez #120490
      */
     public partial class DisplayPetInfo : Form
     {
