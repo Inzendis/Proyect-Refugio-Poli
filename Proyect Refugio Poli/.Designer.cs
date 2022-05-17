@@ -41,7 +41,9 @@
             this.currentAnimalsTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.amountOfPetsLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // fileToolStripMenuItem
@@ -59,35 +61,35 @@
             // addNewPetToolStripMenuItem
             // 
             this.addNewPetToolStripMenuItem.Name = "addNewPetToolStripMenuItem";
-            this.addNewPetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addNewPetToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.addNewPetToolStripMenuItem.Text = "Add New Pet";
             this.addNewPetToolStripMenuItem.Click += new System.EventHandler(this.addNewPetToolStripMenuItem_Click);
             // 
             // modifyAPetToolStripMenuItem
             // 
             this.modifyAPetToolStripMenuItem.Name = "modifyAPetToolStripMenuItem";
-            this.modifyAPetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modifyAPetToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.modifyAPetToolStripMenuItem.Text = "Modify a Pet";
             this.modifyAPetToolStripMenuItem.Click += new System.EventHandler(this.modifyAPetToolStripMenuItem_Click);
             // 
             // displayPetInfoToolStripMenuItem
             // 
             this.displayPetInfoToolStripMenuItem.Name = "displayPetInfoToolStripMenuItem";
-            this.displayPetInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.displayPetInfoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.displayPetInfoToolStripMenuItem.Text = "Display Pet Info";
             this.displayPetInfoToolStripMenuItem.Click += new System.EventHandler(this.displayPetInfoToolStripMenuItem_Click);
             // 
             // reportToolStripMenuItem
             // 
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.reportToolStripMenuItem.Text = "Report";
             this.reportToolStripMenuItem.Click += new System.EventHandler(this.reportToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -121,26 +123,26 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(260, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(271, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // currentAnimalsTextBox
             // 
             this.currentAnimalsTextBox.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.currentAnimalsTextBox.Location = new System.Drawing.Point(12, 62);
+            this.currentAnimalsTextBox.Location = new System.Drawing.Point(12, 113);
             this.currentAnimalsTextBox.Multiline = true;
             this.currentAnimalsTextBox.Name = "currentAnimalsTextBox";
             this.currentAnimalsTextBox.ReadOnly = true;
             this.currentAnimalsTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.currentAnimalsTextBox.Size = new System.Drawing.Size(220, 337);
+            this.currentAnimalsTextBox.Size = new System.Drawing.Size(246, 337);
             this.currentAnimalsTextBox.TabIndex = 1;
             this.currentAnimalsTextBox.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 45);
+            this.label1.Location = new System.Drawing.Point(12, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 3;
@@ -149,16 +151,28 @@
             // amountOfPetsLabel
             // 
             this.amountOfPetsLabel.AutoSize = true;
-            this.amountOfPetsLabel.Location = new System.Drawing.Point(92, 45);
+            this.amountOfPetsLabel.Location = new System.Drawing.Point(93, 97);
             this.amountOfPetsLabel.Name = "amountOfPetsLabel";
             this.amountOfPetsLabel.Size = new System.Drawing.Size(0, 13);
             this.amountOfPetsLabel.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Proyecto_Poli_Refugio.Properties.Resources.LOGO_PUPR;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(246, 55);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // PolyRefugeFormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(260, 417);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(271, 465);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.amountOfPetsLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.currentAnimalsTextBox);
@@ -169,6 +183,7 @@
             this.Activated += new System.EventHandler(this.EnterApp);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,6 +204,7 @@
         private System.Windows.Forms.TextBox currentAnimalsTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label amountOfPetsLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

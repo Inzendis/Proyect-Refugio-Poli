@@ -43,7 +43,6 @@
             this.pedrigreeTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.previousDateLabel = new System.Windows.Forms.Label();
             this.vaccine3TextBox = new System.Windows.Forms.TextBox();
             this.vaccine2TextBox = new System.Windows.Forms.TextBox();
             this.vaccine1TextBox = new System.Windows.Forms.TextBox();
@@ -199,15 +198,6 @@
             this.dateTimePicker.TabIndex = 30;
             this.dateTimePicker.Value = new System.DateTime(2022, 5, 7, 0, 0, 0, 0);
             // 
-            // previousDateLabel
-            // 
-            this.previousDateLabel.AutoSize = true;
-            this.previousDateLabel.Location = new System.Drawing.Point(49, 361);
-            this.previousDateLabel.Name = "previousDateLabel";
-            this.previousDateLabel.Size = new System.Drawing.Size(30, 13);
-            this.previousDateLabel.TabIndex = 31;
-            this.previousDateLabel.Text = "Date";
-            // 
             // vaccine3TextBox
             // 
             this.vaccine3TextBox.Location = new System.Drawing.Point(290, 166);
@@ -279,7 +269,6 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.previousDateLabel);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pedrigreeTextBox);
@@ -320,7 +309,6 @@
         private System.Windows.Forms.TextBox pedrigreeTextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
-        private System.Windows.Forms.Label previousDateLabel;
         private System.Windows.Forms.TextBox vaccine3TextBox;
         private System.Windows.Forms.TextBox vaccine2TextBox;
         private System.Windows.Forms.TextBox vaccine1TextBox;
